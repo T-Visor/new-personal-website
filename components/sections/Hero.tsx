@@ -7,9 +7,9 @@ export const Hero = () => {
       id="hero"
       className="h-screen flex flex-col justify-center items-center text-center dark:bg-gray-900"
     >
-      <h1 className="text-5xl font-bold mb-4 dark:text-gray-100">Hi, I'm Turhan Kimbrough</h1>
+      <h1 className="text-5xl font-bold mb-4 dark:text-gray-100">Turhan Kimbrough</h1>
       <p className="text-xl max-w-xl mb-6 dark:text-gray-200">
-        Full-Stack AI Engineer and Photographer.
+        Full-Stack AI Engineer and Photographer
       </p>
       <Button
         variant="ghost"
