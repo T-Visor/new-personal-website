@@ -29,10 +29,11 @@ export const Projects = () => {
         </div>
         <div className="bg-black dark:bg-white ">
           <Image
-            src=""
-            width={200}
-            height={200}
-            alt="Picture of the author"
+            className="dark:border-2 dark:border-gray-700 shadow-lg"
+            src="/housing-search-screenshot.png"
+            width={800}
+            height={800}
+            alt="screenshot of natural language zillow search"
           />
         </div>
       </div>
