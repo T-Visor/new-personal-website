@@ -14,7 +14,7 @@ export const ClientWrapperLayout = ({
 
   return (
     <>
-      <header className="flex justify-between py-2.5 px-5 bg-gray-50 dark:bg-gray-900">
+      <header className="flex justify-between py-3 px-5 bg-gray-50 dark:bg-gray-800">
         <div className="flex justify-center items-center space-x-2 font-medium">
           <Button variant="ghost">
             About
@@ -38,7 +38,7 @@ export const ClientWrapperLayout = ({
       <main>
         {children}
       </main>
-      <footer className="flex justify-between py-6 px-5 bg-gray-50 dark:bg-gray-900 text-sm font-medium">
+      <footer className="flex justify-between py-6 px-5 bg-gray-50 dark:bg-gray-800 text-sm font-medium">
         <div className="flex justify-center items-center space-x-3 text-lg">
           <span>
             Turhan Kimbrough
@@ -46,19 +46,16 @@ export const ClientWrapperLayout = ({
         </div>
         <div className="flex justify-center items-center">
           <Button variant="ghost">
-            <Mail className="size-5">
-            </Mail>
+            <Mail className="size-5"/>
           </Button>
           <Button variant="ghost">
-            <Linkedin className="size-5">
-            </Linkedin>
+            <Linkedin className="size-5"/>
           </Button>
           <Button variant="ghost">
-            <Github className="size-5">
-            </Github>
+            <Github className="size-5"/>
           </Button>
           <Button variant="ghost">
-            <Camera className="size-5"></Camera>
+            <Camera className="size-5"/>
           </Button>
         </div>
       </footer>
