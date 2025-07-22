@@ -20,6 +20,9 @@ export const ClientWrapperLayout = ({
             About
           </Button>
           <Button variant="ghost">
+            Skills
+          </Button>
+          <Button variant="ghost">
             Projects
           </Button>
           <Button variant="ghost">

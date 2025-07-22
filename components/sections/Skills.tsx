@@ -1,0 +1,52 @@
+// components/About.tsx
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { AiOutlinePython } from "react-icons/ai";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiCplusplus } from "react-icons/si";
+import { FaJava } from "react-icons/fa6";
+import { FaGitAlt } from "react-icons/fa";
+
+export const Skills = () => {
+  return (
+    <section
+      id="skills"
+      className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white py-16 flex flex-col items-center"
+    >
+      <h2 className="text-4xl font-bold mb-10">Skills</h2>
+
+      {/* Staggered Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              <h2 className="text-bf text-xl">Programming</h2>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex justify-start space-x-5">
+              <AiOutlinePython className="size-10" />
+              <IoLogoJavascript className="size-10" />
+              <SiCplusplus className="size-10" />
+              <FaJava className="size-10" />
+              <FaGitAlt className="size-10" />
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              <h2 className="text-bf text-xl">Generative AI Frameworks</h2>
+            </CardTitle>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              <h2 className="text-bf text-xl">Web Technologies</h2>
+            </CardTitle>
+          </CardHeader>            
+        </Card>
+      </div>
+    </section>
+  );
+}
