@@ -25,9 +25,6 @@ export const ClientWrapperLayout = ({
           <Button variant="ghost" className="text-md">
             Projects
           </Button>
-          <Button variant="ghost" className="text-md">
-            Photography
-          </Button>
         </div>
         <Button
           variant="ghost"
@@ -41,12 +38,7 @@ export const ClientWrapperLayout = ({
       <main>
         {children}
       </main>
-      <footer className="flex justify-between py-6 px-5 bg-gray-50 dark:bg-gray-800 text-sm font-medium">
-        <div className="flex justify-center items-center space-x-3 text-lg">
-          <span>
-            Turhan Kimbrough
-          </span>
-        </div>
+      <footer className="flex justify-center py-6 px-5 bg-gray-50 dark:bg-gray-800 text-sm font-medium">
         <div className="flex justify-center items-center">
           <Button variant="ghost">
             <Mail className="size-5"/>

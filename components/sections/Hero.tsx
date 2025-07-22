@@ -9,7 +9,7 @@ export const Hero = () => {
     >
       <h1 className="text-5xl font-bold mb-4 dark:text-gray-100">Turhan Kimbrough</h1>
       <p className="text-xl max-w-xl mb-6 dark:text-gray-200">
-        Full-Stack AI Engineer and Photographer
+        Full-Stack AI Engineer
       </p>
       <Button
         variant="ghost"
