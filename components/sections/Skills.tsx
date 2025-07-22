@@ -24,7 +24,7 @@ export const Skills = () => {
     >
       <h2 className="text-4xl font-bold mb-10">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
-        <Card className="dark:bg-gray-800">
+        <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Programming</h2>
@@ -56,7 +56,7 @@ export const Skills = () => {
           </CardContent>
         </Card>
 
-        <Card className="dark:bg-gray-800">
+        <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Generative AI</h2>
@@ -87,7 +87,7 @@ export const Skills = () => {
             </div>
           </CardContent>
         </Card>
-        <Card className="dark:bg-gray-800">
+        <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Web Technologies</h2>
