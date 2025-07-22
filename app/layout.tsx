@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Camera, Github, Mail } from "lucide-react";
+import { ThemeProvider } from "@/components/theme-provider"
+import { ClientWrapperLayout } from "@/components/client-wrapper-layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,49 +29,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <header>
-          <div className="flex justify-between py-2.5 px-5 bg-gray-50 dark:bg-gray-900">
-            <div className="flex justify-center items-center space-x-2 font-medium">
-              <Button variant="ghost">
-                About
-              </Button>
-              <Button variant="ghost">
-                Projects
-              </Button>
-              <Button variant="ghost">
-                Photography
-              </Button>
-            </div>
-            <Button variant="ghost">
-              <Moon className="size-5" />
-            </Button>
-          </div>
-        </header>
-        {children}
-        <footer className="flex justify-between py-6 px-5 bg-gray-50 dark:bg-gray-900 text-sm font-medium">
-          <div className="flex justify-center items-center space-x-3 text-lg">
-            <span>
-              Turhan Kimbrough
-            </span>
-          </div>
-          <div className="flex justify-center items-center">
-            <Button variant="ghost">
-              <Mail className="size-5">
-              </Mail>
-            </Button>
-            <Button variant="ghost">
-              <Linkedin className="size-5">
-              </Linkedin>
-            </Button>
-            <Button variant="ghost">
-              <Github className="size-5">
-              </Github>
-            </Button>
-            <Button variant="ghost">
-              <Camera className="size-5"></Camera>
-            </Button>
-          </div>
-        </footer>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClientWrapperLayout>
+            {children}
+          </ClientWrapperLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
