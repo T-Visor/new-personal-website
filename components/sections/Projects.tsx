@@ -5,18 +5,28 @@ import { GithubIcon } from "lucide-react";
 
 const projectData = [
   {
+    title: "Note-a-log",
+    description:
+      "An AI-powered note-taking app which helps you stay organized. Note-a-log analyzes note contents and automatically suggests the most appropriate existing folders, or recommends creating new folders when your notes don't fit existing categories.",
+    image: "/note-a-log-screenshot.png",
+    github: "",
+    publication: "",
+  },
+  {
     title: "Natural Language Housing Search",
     description:
       "A Zillow-style hobby project that leverages generative AI to power natural language search, enabling users to explore homes for sale through a seamless, intuitive interface.",
     image: "/housing-search-screenshot.png",
     github: "https://github.com/T-Visor/natural-language-housing-search",
+    publication: "",
   },
   {
-    title: "AI-Powered Recipe Generator",
+    title: "Deep CAPTCHA Recognition",
     description:
-      "An app that uses AI to suggest recipes based on the ingredients you have at home. Great for reducing food waste and improving home cooking.",
-    image: "/housing-search-screenshot.png",
-    github: "#",
+      "Developed a comprehensive framework for training and fine-tuning convolutional neural network (CNN) models to recognize text-based CAPTCHA images.",
+    image: "/crabi-preprocessing-example.png",
+    github: "https://github.com/T-Visor/decruehd-framework",
+    publication: "https://ieeexplore.ieee.org/document/9798233",
   },
   // Add more project objects here...
 ];
@@ -44,17 +54,30 @@ export const Projects = () => {
                 {project.title}
               </h2>
               <p className="text-xl py-3">{project.description}</p>
-              <div className="py-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline" className="text-xl flex items-center">
-                    <GithubIcon className="size-5 mr-2" />
-                    View on GitHub
-                  </Button>
-                </a>
+              <div className="flex justify-start items-center space-x-3">
+                {project.github && <div className="py-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="text-xl flex items-center">
+                      <GithubIcon className="size-5" />
+                      GitHub
+                    </Button>
+                  </a>
+                </div>}
+                {project.publication &&
+                  <a
+                    href={project.publication}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="text-xl flex items-center">
+                      Publication
+                    </Button>
+                  </a>
+                }
               </div>
             </div>
 
