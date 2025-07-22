@@ -5,6 +5,10 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { SiFastapi } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiShadcnui } from "react-icons/si";
 
 export const Skills = () => {
   return (
@@ -44,7 +48,15 @@ export const Skills = () => {
             <CardTitle>
               <h2 className="text-bf text-xl">Web Technologies</h2>
             </CardTitle>
-          </CardHeader>            
+          </CardHeader>
+          <CardContent>
+            <div className="flex justify-start space-x-5">
+              <FaReact className="size-10" />
+              <SiFastapi className="size-10" />
+              <RiTailwindCssFill className="size-10" />
+              <SiShadcnui className="size-10" />
+            </div>
+          </CardContent>            
         </Card>
       </div>
     </section>
