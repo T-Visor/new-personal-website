@@ -7,7 +7,7 @@ export const About = () => {
       className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl">
-        <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300">
+        <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300"> {/* dark:bg-gray-800 p-6 rounded-xl shadow-sm border-1 */}
           <h1 className="text-4xl font-semibold py-3 text-gray-700 dark:text-gray-200">
             About Me
           </h1>
@@ -21,7 +21,7 @@ export const About = () => {
             <p> Later, I learned about generative AI technology which has led me here today as an AI Engineer.</p>
           </div>
         </div>
-        <div className="bg-black dark:bg-white ">
+        <div className="bg-black">
           <Image
             src="/angie-pic.JPG"
             width={500}
