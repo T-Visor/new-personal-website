@@ -20,11 +20,11 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white py-16 flex flex-col items-center"
+      className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-16 flex flex-col items-center"
     >
       <h2 className="text-4xl font-bold mb-10">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
-        <Card>
+        <Card className="dark:bg-gray-800">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Programming</h2>
@@ -56,7 +56,7 @@ export const Skills = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="dark:bg-gray-800">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Generative AI</h2>
@@ -87,7 +87,7 @@ export const Skills = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="dark:bg-gray-800">
           <CardHeader>
             <CardTitle>
               <h2 className="text-bf text-xl">Web Technologies</h2>

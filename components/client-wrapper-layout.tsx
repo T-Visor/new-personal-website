@@ -14,7 +14,7 @@ export const ClientWrapperLayout = ({
 
   return (
     <>
-      <header className="flex justify-between py-3 px-5 bg-gray-50 dark:bg-gray-800">
+      <header className="flex justify-between py-3 px-5 bg-gray-50 dark:bg-gray-800 dark:text-gray-200">
         <div className="flex justify-center items-center space-x-2 font-medium">
           <Button variant="ghost">
             About

@@ -5,16 +5,16 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen flex flex-col justify-center items-center text-center dark:bg-gray-900 dark:text-white"
+      className="h-screen flex flex-col justify-center items-center text-center dark:bg-gray-900"
     >
-      <h1 className="text-5xl font-bold mb-4">Hi, I'm Turhan Kimbrough</h1>
-      <p className="text-xl max-w-xl mb-6">
+      <h1 className="text-5xl font-bold mb-4 dark:text-gray-100">Hi, I'm Turhan Kimbrough</h1>
+      <p className="text-xl max-w-xl mb-6 dark:text-gray-200">
         Full-Stack AI Engineer and Photographer.
       </p>
       <Button
         variant="ghost"
         href="#projects"
-        className="px-6 py-3 rounded-full font-semibold transition text-md"
+        className="px-6 py-3 rounded-full font-semibold transition text-md dark:text-gray-400"
       >
         View My Work
         <MoveDown/>
