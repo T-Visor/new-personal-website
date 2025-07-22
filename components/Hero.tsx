@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { MoveDown } from "lucide-react";
+
 export const Hero = () => {
   return (
     <section
@@ -8,12 +11,14 @@ export const Hero = () => {
       <p className="text-xl max-w-xl mb-6">
         Full-Stack AI Engineer and Photographer.
       </p>
-      <a
+      <Button
+        variant="ghost"
         href="#projects"
-        className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition"
+        className="px-6 py-3 rounded-full font-semibold transition text-md"
       >
         View My Work
-      </a>
+        <MoveDown/>
+      </Button>
     </section>
   );
 }
