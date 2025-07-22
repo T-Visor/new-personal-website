@@ -9,6 +9,13 @@ import { FaReact } from "react-icons/fa";
 import { SiFastapi } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
+import { SiOllama } from "react-icons/si";
+import { SiOpenai } from "react-icons/si";
+import { SiTensorflow } from "react-icons/si";
+import { SiLangchain } from "react-icons/si";
+import { SiHuggingface } from "react-icons/si";
+import { SiPytorch } from "react-icons/si";
 
 export const Skills = () => {
   return (
@@ -39,9 +46,19 @@ export const Skills = () => {
         <Card>
           <CardHeader>
             <CardTitle>
-              <h2 className="text-bf text-xl">Generative AI Frameworks</h2>
+              <h2 className="text-bf text-xl">Generative AI</h2>
             </CardTitle>
           </CardHeader>
+          <CardContent>
+            <div className="flex justify-start space-x-5">
+              <SiOllama className="size-10" />
+              <SiOpenai className="size-10" />
+              <SiTensorflow className="size-10" />
+              <SiLangchain className="size-10" />
+              <SiHuggingface className="size-10" />
+              <SiPytorch className="size-10" />
+            </div>
+          </CardContent>
         </Card>
         <Card>
           <CardHeader>
@@ -55,8 +72,9 @@ export const Skills = () => {
               <SiFastapi className="size-10" />
               <RiTailwindCssFill className="size-10" />
               <SiShadcnui className="size-10" />
+              <FaDocker className="size-10" />
             </div>
-          </CardContent>            
+          </CardContent>
         </Card>
       </div>
     </section>
