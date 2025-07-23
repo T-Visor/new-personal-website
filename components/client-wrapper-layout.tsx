@@ -1,8 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Camera, Github, Mail, GraduationCap } from "lucide-react";
-import { useTheme } from "next-themes"
+import { Sun, Moon, Linkedin, Camera, Github, Mail, GraduationCap, X, Menu } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useState } from "react";
 
 export const ClientWrapperLayout = ({
   children,
@@ -12,31 +13,88 @@ export const ClientWrapperLayout = ({
 
   const { setTheme, resolvedTheme } = useTheme()
 
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
+  const toggleHamburgerMenu = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
+
   return (
     <>
       <header className="flex justify-between py-3 px-5 bg-gray-50 text-gray-700 dark:bg-gray-800 dark:text-gray-200">
-        <div className="flex justify-center items-center space-x-2 font-medium">
+
+        {/* Standard desktop layout */}
+        <nav className="hidden md:flex justify-center items-center space-x-2 font-medium">
           <a href="#about">
-            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+            <Button variant="ghost" className="text-md hover:bg-gray-200 dark:hover:bg-gray-700">
               About
             </Button>
           </a>
           <a href="#skills">
-            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+            <Button variant="ghost" className="text-md hover:bg-gray-200 dark:hover:bg-gray-700">
               Skills
             </Button>
           </a>
           <a href="#projects">
-            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+            <Button variant="ghost" className="text-md hover:bg-gray-200 dark:hover:bg-gray-700">
               Projects
             </Button>
           </a>
           <a href="#footer">
-            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+            <Button variant="ghost" className="text-md hover:bg-gray-200 dark:hover:bg-gray-700">
               Contact
             </Button>
           </a>
-        </div>
+        </nav>
+
+        {/* Mobile Hamburger */}
+        <Button
+          variant="ghost"
+          onClick={toggleHamburgerMenu}
+          className="md:hidden text-gray-700 dark:text-gray-200"
+        >
+          {hamburgerMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+        </Button>
+
+        {/* Mobile Dropdown Menu */}
+        {hamburgerMenuOpen && (
+          <nav className="md:hidden flex flex-col justify-start items-center bg-gray-50 dark:bg-gray-800 px-4 pb-4 text-gray-700 dark:text-gray-200 space-y-2">
+            <a href="#about">
+              <Button 
+                variant="ghost" 
+                className="text-md"
+                onClick={() => setHamburgerMenuOpen(false)}
+              >
+                About
+              </Button>
+            </a>
+            <a href="#skills">
+              <Button 
+                variant="ghost" 
+                className="text-md"
+                onClick={() => setHamburgerMenuOpen(false)}
+              >                
+                Skills
+              </Button>
+            </a>
+            <a href="#projects">
+              <Button 
+                variant="ghost" 
+                className="text-md"
+                onClick={() => setHamburgerMenuOpen(false)}
+              >
+                Projects
+              </Button>
+            </a>
+            <a href="#footer">
+              <Button 
+                variant="ghost" 
+                className="text-md"
+                onClick={() => setHamburgerMenuOpen(false)}
+              >                
+                Contact
+              </Button>
+            </a>
+          </nav>
+        )}
+
         <Button
           variant="ghost"
           className="hover:bg-gray-200 dark:hover:bg-gray-700"
