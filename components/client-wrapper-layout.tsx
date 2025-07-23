@@ -31,6 +31,11 @@ export const ClientWrapperLayout = ({
               Projects
             </Button>
           </a>
+          <a href="#footer">
+            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+              Contact
+            </Button>
+          </a>
         </div>
         <Button
           variant="ghost"
@@ -45,54 +50,46 @@ export const ClientWrapperLayout = ({
       <main>
         {children}
       </main>
-      <footer className="flex flex-col items-center justify-center py-6 px-5 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 text-sm font-medium space-y-3">
-        <div className="flex space-x-4">
-          <a
-            href="mailto:tkimbro.jobs@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Email"
-          >
-            <Button variant="ghost">
-              <Mail className="size-5" />
-            </Button>
-          </a>
-          <a
-            href="https://linkedin.com/in/turhan-kim"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <Button variant="ghost">
-              <Linkedin className="size-5" />
-            </Button>
-          </a>
-          <a
-            href="https://github.com/T-Visor"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <Button variant="ghost">
-              <Github className="size-5" />
-            </Button>
-          </a>
-          <a
-            href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="ResearchGate"
-          >
-            <Button variant="ghost">
-              <GraduationCap className="size-5" />
-            </Button>
-          </a>
+      <footer
+        className="flex flex-col items-center justify-center py-6 px-5 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 text-sm font-medium space-y-3 border-t border-gray-200 dark:border-gray-700"
+        id="footer"
+      >
+        <span className="text-lg text-gray-500 dark:text-gray-400 text-center">
+          Connect With Me
+        </span>
 
+        <div className="flex flex-wrap justify-center space-x-4">
+          <a href="mailto:tkimbro.jobs@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Button className="hover:bg-gray-200 dark:hover:bg-gray-700" variant="ghost" aria-label="Email">
+              <Mail className="size-5" />
+              <span className="sr-only">Email</span>
+            </Button>
+          </a>
+          <a href="https://linkedin.com/in/turhan-kim" target="_blank" rel="noopener noreferrer">
+            <Button className="hover:bg-gray-200 dark:hover:bg-gray-700" variant="ghost" aria-label="LinkedIn">
+              <Linkedin className="size-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Button>
+          </a>
+          <a href="https://github.com/T-Visor" target="_blank" rel="noopener noreferrer">
+            <Button className="hover:bg-gray-200 dark:hover:bg-gray-700" variant="ghost" aria-label="GitHub">
+              <Github className="size-5" />
+              <span className="sr-only">GitHub</span>
+            </Button>
+          </a>
+          <a href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212" target="_blank" rel="noopener noreferrer">
+            <Button className="hover:bg-gray-200 dark:hover:bg-gray-700" variant="ghost" aria-label="ResearchGate">
+              <GraduationCap className="size-5" />
+              <span className="sr-only">ResearchGate</span>
+            </Button>
+          </a>
         </div>
+
         <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
           © {new Date().getFullYear()} Turhan Kimbrough. All rights reserved.
         </p>
       </footer>
+
     </>
   )
 }

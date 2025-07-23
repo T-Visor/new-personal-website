@@ -35,9 +35,9 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900 pb-10"
+      className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900 pb-20"
     >
-      <div className="text-4xl font-bold mb-10 p-8">
+      <div className="text-4xl font-bold mb-10 pt-8">
         <h2>Projects</h2>
       </div>
 
@@ -46,7 +46,7 @@ export const Projects = () => {
           <div
             key={index}
             className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } items-center gap-10`}
+              } items-center gap-10 border-t dark:border-gray-600 pt-10 sm:border-0 sm:pb-0`}
           >
             {/* Text Section */}
             <div className="flex-1 text-gray-600 dark:text-gray-300 text-center md:text-left">
@@ -54,7 +54,7 @@ export const Projects = () => {
                 {project.title}
               </h2>
               <p className="text-xl py-3">{project.description}</p>
-              <div className="flex justify-start items-center space-x-3">
+              <div className="flex justify-center md:justify-start items-center space-x-3">
                 {project.github && <div className="py-3">
                   <a
                     href={project.github}
