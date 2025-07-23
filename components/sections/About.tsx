@@ -13,7 +13,7 @@ export const About = () => {
           </h1>
           <div className="text-xl py-5 text-gray-600 dark:text-gray-300">
             <p>
-              I'm Turhan Kimbrough, a software engineer with a Master’s in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
+               I'm a software engineer with a Master’s in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
               
                During graduate school, I published multiple research papers in top venues like IEEE. <br/><br/> 
                
@@ -25,8 +25,8 @@ export const About = () => {
         <div className="bg-black">
           <Image
             src="/angie-pic.JPG"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             alt="Picture of the author"
           />
         </div>
