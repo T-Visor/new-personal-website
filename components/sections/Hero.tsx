@@ -11,14 +11,15 @@ export const Hero = () => {
       <p className="text-xl max-w-xl mb-6 dark:text-gray-200">
         Full-Stack AI Engineer
       </p>
-      <Button
-        variant="ghost"
-        href="#projects"
-        className="px-6 py-3 rounded-full font-semibold transition text-md dark:text-gray-400"
-      >
-        View My Work
-        <MoveDown/>
-      </Button>
+      <a href="#projects">
+        <Button
+          variant="ghost"
+          className="px-6 py-3 rounded-full font-semibold transition text-md dark:text-gray-400"
+        >
+          View My Work
+          <MoveDown />
+        </Button>
+      </a>
     </section>
   );
 }

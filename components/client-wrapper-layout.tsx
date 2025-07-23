@@ -16,18 +16,25 @@ export const ClientWrapperLayout = ({
     <>
       <header className="flex justify-between py-3 px-5 bg-gray-50 text-gray-700 dark:bg-gray-800 dark:text-gray-200">
         <div className="flex justify-center items-center space-x-2 font-medium">
-          <Button variant="ghost" className="text-md">
-            About
-          </Button>
-          <Button variant="ghost" className="text-md">
-            Skills
-          </Button>
-          <Button variant="ghost" className="text-md">
-            Projects
-          </Button>
+          <a href="#about">
+            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+              About
+            </Button>
+          </a>
+          <a href="#skills">
+            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+              Skills
+            </Button>
+          </a>
+          <a href="#projects">
+            <Button variant="ghost" className="text-md hover: hover:bg-gray-200 dark:hover:bg-gray-700">
+              Projects
+            </Button>
+          </a>
         </div>
         <Button
           variant="ghost"
+          className="hover:bg-gray-200 dark:hover:bg-gray-700"
           onClick={() => {
             resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
           }}
