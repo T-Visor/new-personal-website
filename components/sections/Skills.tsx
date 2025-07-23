@@ -26,12 +26,12 @@ export const Skills = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
-            <CardTitle>
+            <CardTitle className="text-center md:text-start">
               <h2 className="text-bf text-xl">Programming</h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-6 justify-start">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
               <div className="flex flex-col items-center">
                 <AiOutlinePython className="size-10" />
                 <span className="mt-2 text-sm">Python</span>
@@ -58,12 +58,12 @@ export const Skills = () => {
 
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
-            <CardTitle>
+            <CardTitle className="text-center md:text-start">
               <h2 className="text-bf text-xl">Generative AI</h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-6 justify-start">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
               <div className="flex flex-col items-center">
                 <SiOllama className="size-10" />
                 <span className="mt-2 text-sm">Ollama</span>
@@ -87,14 +87,15 @@ export const Skills = () => {
             </div>
           </CardContent>
         </Card>
+
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
-            <CardTitle>
+            <CardTitle className="text-center md:text-start">
               <h2 className="text-bf text-xl">Web Technologies</h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-6 justify-start">
+            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
               <div className="flex flex-col items-center">
                 <FaReact className="size-10" />
                 <span className="mt-2 text-sm">React</span>
