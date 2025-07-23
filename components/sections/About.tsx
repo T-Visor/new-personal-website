@@ -12,12 +12,15 @@ export const About = () => {
             About Me
           </h1>
           <div className="text-xl py-5 text-gray-600 dark:text-gray-300">
-            <p>Greetings!</p>
-            <br />
-            <p>I'm Turhan Kimbrough, a software engineer with a Master’s in Computer Science from Towson University, where I first discovered my passion for deep learning. During grad school, I published multiple research papers in top venues like IEEE. While working with the Department of Defense, I began focusing on generative AI, integrating advanced models to support real-time decision-making for soldiers in the field. Today, I continue to build intelligent systems that push the boundaries of what AI can do.</p>
+            <p>
+              I'm Turhan Kimbrough, a software engineer with a Master’s in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
+              
+               During graduate school, I published multiple research papers in top venues like IEEE. <br/><br/> 
+               
+               While working with the Department of Defense, I began focusing on generative AI, integrating advanced models to support real-time decision-making for soldiers in the field. <br/><br/>
+               
+               Today, I continue to build products that push the boundaries of what AI can do.</p>
           </div>
-
-
         </div>
         <div className="bg-black">
           <Image
