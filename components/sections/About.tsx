@@ -13,11 +13,11 @@ export const About = () => {
           </h1>
           <div className="text-xl py-5 text-gray-600 dark:text-gray-300">
             <p>
-               I'm a software engineer with a Master’s in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
+               I'm a software engineer with a Master’s degree in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
               
                During graduate school, I published multiple research papers in top venues like IEEE. <br/><br/> 
                
-               While working with the Department of Defense, I began focusing on generative AI, integrating advanced models to support real-time decision-making for soldiers in the field. <br/><br/>
+               Later, I worked for the Department of Defense, where I began focusing on generative AI, integrating the technology to support faster decision-making for soldiers in the field. <br/><br/>
                
                Today, I continue to build products that push the boundaries of what AI can do.</p>
           </div>
