@@ -22,8 +22,9 @@ export const About = () => {
                Today, I continue to build products that push the boundaries of what AI can do.</p>
           </div>
         </div>
-        <div className="bg-black">
+        <div>
           <Image
+            className="rounded-full"
             src="/angie-pic.JPG"
             width={600}
             height={600}
