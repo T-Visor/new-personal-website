@@ -109,7 +109,7 @@ export const ClientWrapperLayout = ({
         {children}
       </main>
       <footer
-        className="flex flex-col items-center justify-center py-6 px-5 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 text-sm font-medium space-y-3 border-t border-gray-200 dark:border-gray-700"
+        className="flex flex-col items-center justify-center py-6 px-5 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 text-sm font-medium space-y-3 border-gray-200 dark:border-gray-700"
         id="footer"
       >
         <span className="text-lg text-gray-500 dark:text-gray-400 text-center">
