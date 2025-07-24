@@ -84,10 +84,10 @@ export const Projects = () => {
             {/* Image Section */}
             <div className="flex-1 flex justify-center">
               <Image
-                className="dark:border-gray-700 shadow-lg"
+                className="border-gray-300 dark:border-gray-700 shadow-lg rounded-sm"
                 src={project.image}
-                width={800}
-                height={800}
+                width={500}
+                height={500}
                 alt={`screenshot of ${project.title}`}
               />
             </div>
