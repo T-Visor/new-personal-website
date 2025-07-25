@@ -10,11 +10,81 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import { SiOllama } from "react-icons/si";
-import { SiOpenai } from "react-icons/si";
 import { SiTensorflow } from "react-icons/si";
 import { SiLangchain } from "react-icons/si";
 import { SiHuggingface } from "react-icons/si";
 import { SiPytorch } from "react-icons/si";
+
+const programmingIcons = [
+  {
+    name: AiOutlinePython,
+    caption: "Python"
+  },
+  {
+    name: IoLogoJavascript,
+    caption: "JavaScript"
+  },
+  {
+    name: SiCplusplus,
+    caption: "C++"
+  },
+  {
+    name: FaJava,
+    caption: "Java"
+  },
+  {
+    name: FaGitAlt,
+    caption: "Git"
+  },
+];
+
+const aiToolkitIcons = [
+  {
+    name: SiOllama,
+    caption: "Ollama"
+  },
+  {
+    name: SiHuggingface,
+    caption: "Hugging Face"
+  },
+  {
+    name: SiLangchain,
+    caption: "LangChain"
+  },
+  {
+    name: SiTensorflow,
+    caption: "TensorFlow"
+  },
+  {
+    name: SiPytorch,
+    caption: "PyTorch"
+  },
+];
+
+const webToolkitIcons = [
+  {
+    name: FaReact,
+    caption: "React"
+  },
+  {
+    name: SiFastapi,
+    caption: "FastAPI"
+  },
+  {
+    name: RiTailwindCssFill,
+    caption: "Tailwind CSS"
+  },
+  {
+    name: SiShadcnui,
+    caption: "Shadcn/UI"
+  },
+  {
+    name: FaDocker,
+    caption: "Docker"
+  }
+];
+
+const cardNames = ["Programming", "Generative AI", "Web Technologies"];
 
 export const Skills = () => {
   return (
@@ -22,36 +92,38 @@ export const Skills = () => {
       id="skills"
       className="min-h-fit sm:min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-16 flex flex-col justify-center items-center px-5"
     >
-      <h2 className="text-4xl font-semibold mb-10">Skills</h2>
+      <h2 className="text-4xl font-semibold mb-10">
+        Skills
+      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">Programming</h2>
+              <h2 className="text-bf text-xl">
+                Programming
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              <div className="flex flex-col items-center">
-                <AiOutlinePython className="size-10" />
-                <span className="mt-2 text-sm">Python</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <IoLogoJavascript className="size-10" />
-                <span className="mt-2 text-sm">JavaScript</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiCplusplus className="size-10" />
-                <span className="mt-2 text-sm">C++</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <FaJava className="size-10" />
-                <span className="mt-2 text-sm">Java</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <FaGitAlt className="size-10" />
-                <span className="mt-2 text-sm">Git</span>
-              </div>
+              {programmingIcons.map((icon, index) => {
+                const Icon = icon.name;
+
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-wrap gap-6 justify-center md:justify-start"
+                  >
+                    <div className="flex flex-col items-center">
+                      <Icon className="size-10" />
+                      <span className="mt-2 text-sm">
+                        {icon.caption}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </CardContent>
         </Card>
@@ -59,31 +131,30 @@ export const Skills = () => {
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">Generative AI</h2>
+              <h2 className="text-bf text-xl">
+                Generative AI
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              <div className="flex flex-col items-center">
-                <SiOllama className="size-10" />
-                <span className="mt-2 text-sm">Ollama</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiTensorflow className="size-10" />
-                <span className="mt-2 text-sm">TensorFlow</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiLangchain className="size-10" />
-                <span className="mt-2 text-sm">LangChain</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiHuggingface className="size-10" />
-                <span className="mt-2 text-sm">Hugging Face</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiPytorch className="size-10" />
-                <span className="mt-2 text-sm">PyTorch</span>
-              </div>
+              {aiToolkitIcons.map((icon, index) => {
+                const Icon = icon.name;
+
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-wrap gap-6 justify-center md:justify-start"
+                  >
+                    <div className="flex flex-col items-center">
+                      <Icon className="size-10" />
+                      <span className="mt-2 text-sm">
+                        {icon.caption}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </CardContent>
         </Card>
@@ -91,31 +162,30 @@ export const Skills = () => {
         <Card className="dark:bg-gray-800 dark:text-gray-200">
           <CardHeader>
             <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">Web Technologies</h2>
+              <h2 className="text-bf text-xl">
+                Web Development
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              <div className="flex flex-col items-center">
-                <FaReact className="size-10" />
-                <span className="mt-2 text-sm">React</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiFastapi className="size-10" />
-                <span className="mt-2 text-sm">FastAPI</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <RiTailwindCssFill className="size-10" />
-                <span className="mt-2 text-sm">Tailwind CSS</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <SiShadcnui className="size-10" />
-                <span className="mt-2 text-sm">shadcn/ui</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <FaDocker className="size-10" />
-                <span className="mt-2 text-sm">Docker</span>
-              </div>
+              {webToolkitIcons.map((icon, index) => {
+                const Icon = icon.name;
+
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-wrap gap-6 justify-center md:justify-start"
+                  >
+                    <div className="flex flex-col items-center">
+                      <Icon className="size-10" />
+                      <span className="mt-2 text-sm">
+                        {icon.caption}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </CardContent>
         </Card>
