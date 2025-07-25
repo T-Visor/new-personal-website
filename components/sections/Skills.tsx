@@ -1,42 +1,44 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { AiOutlinePython } from "react-icons/ai";
+import { FaGitAlt, FaReact, FaDocker, FaJava } from "react-icons/fa";
+import { SiCplusplus, SiFastapi, SiShadcnui, SiOllama, SiTensorflow, SiLangchain, SiHuggingface, SiPytorch } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiCplusplus } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
-import { FaGitAlt } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { SiFastapi } from "react-icons/si";
+import { AiOutlinePython } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiShadcnui } from "react-icons/si";
-import { FaDocker } from "react-icons/fa";
-import { SiOllama } from "react-icons/si";
-import { SiTensorflow } from "react-icons/si";
-import { SiLangchain } from "react-icons/si";
-import { SiHuggingface } from "react-icons/si";
-import { SiPytorch } from "react-icons/si";
+import { IconType } from "react-icons";
+import { JSX } from "react";
 
-const skillsData = [
+type SkillIcon = {
+  Icon: IconType;
+  caption: string;
+};
+
+type SkillCard = {
+  title: string;
+  icons: SkillIcon[];
+};
+
+const skillsData: SkillCard[] = [
   {
     title: "Programming",
     icons: [
       {
-        name: AiOutlinePython,
+        Icon: AiOutlinePython,
         caption: "Python"
       },
       {
-        name: IoLogoJavascript,
+        Icon: IoLogoJavascript,
         caption: "JavaScript"
       },
       {
-        name: SiCplusplus,
+        Icon: SiCplusplus,
         caption: "C++"
       },
       {
-        name: FaJava,
+        Icon: FaJava,
         caption: "Java"
       },
       {
-        name: FaGitAlt,
+        Icon: FaGitAlt,
         caption: "Git"
       },
     ]
@@ -45,23 +47,23 @@ const skillsData = [
     title: "Generative AI",
     icons: [
       {
-        name: SiOllama,
+        Icon: SiOllama,
         caption: "Ollama"
       },
       {
-        name: SiHuggingface,
+        Icon: SiHuggingface,
         caption: "Hugging Face"
       },
       {
-        name: SiLangchain,
+        Icon: SiLangchain,
         caption: "LangChain"
       },
       {
-        name: SiTensorflow,
+        Icon: SiTensorflow,
         caption: "TensorFlow"
       },
       {
-        name: SiPytorch,
+        Icon: SiPytorch,
         caption: "PyTorch"
       },
     ]
@@ -70,41 +72,65 @@ const skillsData = [
     title: "Web Development",
     icons: [
       {
-        name: FaReact,
+        Icon: FaReact,
         caption: "React"
       },
       {
-        name: SiFastapi,
+        Icon: SiFastapi,
         caption: "FastAPI"
       },
       {
-        name: RiTailwindCssFill,
+        Icon: RiTailwindCssFill,
         caption: "Tailwind CSS"
       },
       {
-        name: SiShadcnui,
+        Icon: SiShadcnui,
         caption: "Shadcn/UI"
       },
       {
-        name: FaDocker,
+        Icon: FaDocker,
         caption: "Docker"
       }
     ]
   },
 ]
 
-export const Skills = () => {
+{/*const SkillCard = ({ title, icons }: SkillCard): JSX.Element => (
+  <Card className="dark:bg-gray-800 dark:text-gray-200">
+    <CardHeader>
+      <CardTitle className="text-center md:text-start">
+        <h2 className="text-bf text-xl">{title}</h2>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+        {icons.map(({ Icon, caption }, i) => (
+          <div key={i} className="flex flex-col items-center">
+            <Icon className="size-10" />
+            <span className="mt-2 text-sm">{caption}</span>
+          </div>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+); */}
+
+export const Skills = (): JSX.Element => {
   return (
     <section
       id="skills"
       className="min-h-fit sm:min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-16 flex flex-col justify-center items-center px-5"
     >
+      {/* Section Title */}
       <h2 className="text-4xl font-semibold mb-10">
         Skills
       </h2>
 
+      {/* Skills cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
         {skillsData.map((skillCard, cardIndex) => {
+          const { title, icons } = skillCard;
+
           return (
             <Card
               key={cardIndex}
@@ -112,27 +138,23 @@ export const Skills = () => {
               <CardHeader>
                 <CardTitle className="text-center md:text-start">
                   <h2 className="text-bf text-xl">
-                    {skillCard.title}
+                    {title}
                   </h2>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-                  {skillCard.icons.map((icon, iconIndex) => {
-                    const Icon = icon.name;
+                  {icons.map((icon, iconIndex) => {
+                    const { Icon, caption } = icon;
+
                     return (
-                      <div
-                        key={iconIndex}
-                        className="flex flex-wrap gap-6 justify-center md:justify-start"
-                      >
-                        <div className="flex flex-col items-center">
-                          <Icon className="size-10" />
-                          <span className="mt-2 text-sm">
-                            {icon.caption}
-                          </span>
-                        </div>
+                      <div key={iconIndex} className="flex flex-col items-center">
+                        <Icon className="size-10" />
+                        <span className="mt-2 text-sm">
+                          {caption}
+                        </span>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </CardContent>
