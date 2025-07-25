@@ -135,19 +135,12 @@ export const ClientWrapperLayout = ({
               <span className="sr-only">GitHub</span>
             </Button>
           </a>
-          <a href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212" target="_blank" rel="noopener noreferrer">
-            <Button className="hover:bg-gray-200 dark:hover:bg-gray-700" variant="ghost" aria-label="ResearchGate">
-              <GraduationCap className="size-5" />
-              <span className="sr-only">ResearchGate</span>
-            </Button>
-          </a>
         </div>
 
         <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
           © {new Date().getFullYear()} Turhan Kimbrough. All rights reserved.
         </p>
       </footer>
-
     </>
   )
 }

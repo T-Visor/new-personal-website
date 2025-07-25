@@ -7,19 +7,26 @@ export const About = () => {
       className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl">
-        <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300"> {/* dark:bg-gray-800 p-6 rounded-xl shadow-sm border-1 */}
+        <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300">
           <h1 className="text-4xl font-semibold py-3 text-gray-700 dark:text-gray-200">
             About Me
           </h1>
-          <div className="text-xl py-5 text-gray-600 dark:text-gray-300">
+          <div className="text-xl py-5 text-gray-600 dark:text-gray-300 [&_strong]:dark:text-gray-200">
             <p>
-               I'm a full-stack web developer with a Bachelor's/Master’s degree in Computer Science from Towson University, where I first discovered my passion for deep learning. <br/><br/>
-              
-               During graduate school, I published multiple research papers in top venues like IEEE. <br/><br/> 
-               
-               Later, I worked for the Department of Defense, where I began focusing on generative AI, integrating the technology to support faster decision-making for soldiers in the field. <br/><br/>
-               
-               Today, I continue to build products that push the boundaries of what AI can do.
+              Hi, I'm <strong>Turhan</strong>! <br /><br />
+
+              I'm a <strong>software engineer</strong> who builds <strong>full-stack applications</strong>, integrates <strong>AI solutions</strong>, and automates complex workflows. My work spans from crafting intuitive <strong>user experiences</strong> to architecting scalable <strong>data pipelines</strong>. <br /><br />
+
+              Early in my career, I contributed to cutting-edge <strong>research</strong> with{" "}
+              <a
+                href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <strong>4 publications</strong>
+              </a>{" "}
+              in prestigious venues like <strong>IEEE</strong>, bringing a rigorous, problem-solving mindset to everything I build. <br /><br />
             </p>
           </div>
         </div>
