@@ -10,9 +10,9 @@ export const About = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl">
         <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300">
-          <h1 className="text-4xl font-semibold py-3 text-gray-700 dark:text-gray-200">
+          <h2 className="text-4xl font-semibold py-3 text-gray-900 dark:text-gray-100">
             About Me
-          </h1>
+          </h2>
           <div className="text-xl py-5 text-gray-600 dark:text-gray-300 [&_strong]:dark:text-gray-200">
             <p>
               Hi, I'm <strong>Turhan</strong>! <br /><br />

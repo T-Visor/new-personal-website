@@ -37,7 +37,7 @@ export const Projects = () => {
       id="projects"
       className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900 pb-20"
     >
-      <div className="text-4xl font-bold mb-10 pt-8">
+      <div className="text-4xl font-semibold mb-10 pt-8">
         <h2>Projects</h2>
       </div>
 
