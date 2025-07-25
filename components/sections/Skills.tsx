@@ -15,76 +15,83 @@ import { SiLangchain } from "react-icons/si";
 import { SiHuggingface } from "react-icons/si";
 import { SiPytorch } from "react-icons/si";
 
-const programmingIcons = [
+const skillsData = [
   {
-    name: AiOutlinePython,
-    caption: "Python"
+    title: "Programming",
+    icons: [
+      {
+        name: AiOutlinePython,
+        caption: "Python"
+      },
+      {
+        name: IoLogoJavascript,
+        caption: "JavaScript"
+      },
+      {
+        name: SiCplusplus,
+        caption: "C++"
+      },
+      {
+        name: FaJava,
+        caption: "Java"
+      },
+      {
+        name: FaGitAlt,
+        caption: "Git"
+      },
+    ]
   },
   {
-    name: IoLogoJavascript,
-    caption: "JavaScript"
+    title: "Generative AI",
+    icons: [
+      {
+        name: SiOllama,
+        caption: "Ollama"
+      },
+      {
+        name: SiHuggingface,
+        caption: "Hugging Face"
+      },
+      {
+        name: SiLangchain,
+        caption: "LangChain"
+      },
+      {
+        name: SiTensorflow,
+        caption: "TensorFlow"
+      },
+      {
+        name: SiPytorch,
+        caption: "PyTorch"
+      },
+    ]
   },
   {
-    name: SiCplusplus,
-    caption: "C++"
+    title: "Web Development",
+    icons: [
+      {
+        name: FaReact,
+        caption: "React"
+      },
+      {
+        name: SiFastapi,
+        caption: "FastAPI"
+      },
+      {
+        name: RiTailwindCssFill,
+        caption: "Tailwind CSS"
+      },
+      {
+        name: SiShadcnui,
+        caption: "Shadcn/UI"
+      },
+      {
+        name: FaDocker,
+        caption: "Docker"
+      }
+    ]
   },
-  {
-    name: FaJava,
-    caption: "Java"
-  },
-  {
-    name: FaGitAlt,
-    caption: "Git"
-  },
-];
-
-const aiToolkitIcons = [
-  {
-    name: SiOllama,
-    caption: "Ollama"
-  },
-  {
-    name: SiHuggingface,
-    caption: "Hugging Face"
-  },
-  {
-    name: SiLangchain,
-    caption: "LangChain"
-  },
-  {
-    name: SiTensorflow,
-    caption: "TensorFlow"
-  },
-  {
-    name: SiPytorch,
-    caption: "PyTorch"
-  },
-];
-
-const webToolkitIcons = [
-  {
-    name: FaReact,
-    caption: "React"
-  },
-  {
-    name: SiFastapi,
-    caption: "FastAPI"
-  },
-  {
-    name: RiTailwindCssFill,
-    caption: "Tailwind CSS"
-  },
-  {
-    name: SiShadcnui,
-    caption: "Shadcn/UI"
-  },
-  {
-    name: FaDocker,
-    caption: "Docker"
-  }
-];
-
-const cardNames = ["Programming", "Generative AI", "Web Technologies"];
+]
 
 export const Skills = () => {
   return (
@@ -97,98 +104,41 @@ export const Skills = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
-        <Card className="dark:bg-gray-800 dark:text-gray-200">
-          <CardHeader>
-            <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">
-                Programming
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              {programmingIcons.map((icon, index) => {
-                const Icon = icon.name;
-
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-wrap gap-6 justify-center md:justify-start"
-                  >
-                    <div className="flex flex-col items-center">
-                      <Icon className="size-10" />
-                      <span className="mt-2 text-sm">
-                        {icon.caption}
-                      </span>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="dark:bg-gray-800 dark:text-gray-200">
-          <CardHeader>
-            <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">
-                Generative AI
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              {aiToolkitIcons.map((icon, index) => {
-                const Icon = icon.name;
-
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-wrap gap-6 justify-center md:justify-start"
-                  >
-                    <div className="flex flex-col items-center">
-                      <Icon className="size-10" />
-                      <span className="mt-2 text-sm">
-                        {icon.caption}
-                      </span>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="dark:bg-gray-800 dark:text-gray-200">
-          <CardHeader>
-            <CardTitle className="text-center md:text-start">
-              <h2 className="text-bf text-xl">
-                Web Development
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-              {webToolkitIcons.map((icon, index) => {
-                const Icon = icon.name;
-
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-wrap gap-6 justify-center md:justify-start"
-                  >
-                    <div className="flex flex-col items-center">
-                      <Icon className="size-10" />
-                      <span className="mt-2 text-sm">
-                        {icon.caption}
-                      </span>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </CardContent>
-        </Card>
+        {skillsData.map((skillCard, cardIndex) => {
+          return (
+            <Card
+              key={cardIndex}
+              className="dark:bg-gray-800 dark:text-gray-200">
+              <CardHeader>
+                <CardTitle className="text-center md:text-start">
+                  <h2 className="text-bf text-xl">
+                    {skillCard.title}
+                  </h2>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+                  {skillCard.icons.map((icon, iconIndex) => {
+                    const Icon = icon.name;
+                    return (
+                      <div
+                        key={iconIndex}
+                        className="flex flex-wrap gap-6 justify-center md:justify-start"
+                      >
+                        <div className="flex flex-col items-center">
+                          <Icon className="size-10" />
+                          <span className="mt-2 text-sm">
+                            {icon.caption}
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          )
+        })}
       </div>
     </section>
   );
