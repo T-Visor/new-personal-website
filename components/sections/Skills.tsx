@@ -17,6 +17,11 @@ type SkillCard = {
   icons: SkillIcon[];
 };
 
+type SkillCardProps = {
+  title: string;
+  icons: SkillIcon[];
+};
+
 const skillsData: SkillCard[] = [
   {
     title: "Programming",
@@ -95,7 +100,7 @@ const skillsData: SkillCard[] = [
   },
 ]
 
-{/*const SkillCard = ({ title, icons }: SkillCard): JSX.Element => (
+const SkillCard = ({ title, icons }: SkillCardProps): JSX.Element => (
   <Card className="dark:bg-gray-800 dark:text-gray-200">
     <CardHeader>
       <CardTitle className="text-center md:text-start">
@@ -104,8 +109,8 @@ const skillsData: SkillCard[] = [
     </CardHeader>
     <CardContent>
       <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-        {icons.map(({ Icon, caption }, i) => (
-          <div key={i} className="flex flex-col items-center">
+        {icons.map(({ Icon, caption }, index) => (
+          <div key={index} className="flex flex-col items-center">
             <Icon className="size-10" />
             <span className="mt-2 text-sm">{caption}</span>
           </div>
@@ -113,7 +118,7 @@ const skillsData: SkillCard[] = [
       </div>
     </CardContent>
   </Card>
-); */}
+);
 
 export const Skills = (): JSX.Element => {
   return (
@@ -121,46 +126,18 @@ export const Skills = (): JSX.Element => {
       id="skills"
       className="min-h-fit sm:min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-16 flex flex-col justify-center items-center px-5"
     >
-      {/* Section Title */}
       <h2 className="text-4xl font-semibold mb-10">
         Skills
       </h2>
 
-      {/* Skills cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
-        {skillsData.map((skillCard, cardIndex) => {
-          const { title, icons } = skillCard;
-
-          return (
-            <Card
-              key={cardIndex}
-              className="dark:bg-gray-800 dark:text-gray-200">
-              <CardHeader>
-                <CardTitle className="text-center md:text-start">
-                  <h2 className="text-bf text-xl">
-                    {title}
-                  </h2>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-                  {icons.map((icon, iconIndex) => {
-                    const { Icon, caption } = icon;
-
-                    return (
-                      <div key={iconIndex} className="flex flex-col items-center">
-                        <Icon className="size-10" />
-                        <span className="mt-2 text-sm">
-                          {caption}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          )
-        })}
+        {skillsData.map(({ title, icons }) => (
+          <SkillCard
+            key={title}
+            title={title}
+            icons={icons}
+          />
+        ))}
       </div>
     </section>
   );
