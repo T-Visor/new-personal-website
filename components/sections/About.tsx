@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 export const About = () => {
   return (
@@ -17,15 +19,18 @@ export const About = () => {
 
               I'm a <strong>software engineer</strong> who builds <strong>full-stack applications</strong>, integrates <strong>AI solutions</strong>, and automates complex workflows. My work spans from crafting intuitive <strong>user experiences</strong> to architecting scalable <strong>data pipelines</strong>. <br /><br />
 
-              Early in my career, I contributed to cutting-edge <strong>research</strong> with{" "}
+              Early in my career, I contributed to cutting-edge <strong>research</strong> with {" "}
               <a
                 href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
-                <strong>4 publications</strong>
-              </a>{" "}
+                <Button variant="ghost" className="text-xl p-0 !px-1 underline">
+                  <strong>4 publications</strong>
+                  <ExternalLink className="size-4"/>
+                </Button>
+              </a> {" "}
               in prestigious venues like <strong>IEEE</strong>, bringing a rigorous, problem-solving mindset to everything I build. <br /><br />
             </p>
           </div>

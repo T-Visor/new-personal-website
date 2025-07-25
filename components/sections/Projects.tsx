@@ -84,7 +84,7 @@ export const Projects = () => {
             {/* Image Section */}
             <div className="flex-1 flex justify-center">
               <Image
-                className="border-gray-300 dark:border-gray-700 shadow-lg rounded-sm"
+                className="border-1 dark:border-gray-700 shadow-lg rounded-sm"
                 src={project.image}
                 width={500}
                 height={500}
