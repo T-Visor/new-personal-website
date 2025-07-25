@@ -23,7 +23,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="hidden sm:flex justify-center items-center">
           <Image
             className="rounded-full"
             src="/angie-pic.JPG"
