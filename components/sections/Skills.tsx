@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { FaGitAlt, FaReact, FaDocker, FaJava } from "react-icons/fa";
 import { SiCplusplus, SiFastapi, SiShadcnui, SiOllama, SiTensorflow, SiLangchain, SiHuggingface, SiPytorch } from "react-icons/si";
@@ -6,6 +8,7 @@ import { AiOutlinePython } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IconType } from "react-icons";
 import { JSX } from "react";
+import { motion } from 'framer-motion';
 
 type SkillIcon = {
   Icon: IconType;
@@ -136,7 +139,12 @@ export const Skills = (): JSX.Element => {
         Skills
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
         {skillsData.map(({ title, icons }) => (
           <SkillCard
             key={title}
@@ -144,7 +152,7 @@ export const Skills = (): JSX.Element => {
             icons={icons}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

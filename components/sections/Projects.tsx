@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
+import { motion } from 'framer-motion';
 
 const projectData = [
   {
@@ -44,7 +47,13 @@ export const Projects = () => {
         <h2>Projects</h2>
       </div>
 
-      <div className="flex flex-col gap-20 max-w-5xl w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-20 max-w-5xl w-full"
+      >
         {projectData.map((project, index) => (
           <div
             key={index}
@@ -110,7 +119,7 @@ export const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

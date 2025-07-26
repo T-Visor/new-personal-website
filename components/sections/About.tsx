@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { motion } from 'framer-motion';
 
 export const About = () => {
   return (
@@ -13,7 +16,13 @@ export const About = () => {
           <h2 className="text-4xl font-semibold py-3 text-gray-900 dark:text-gray-100">
             About Me
           </h2>
-          <div className="text-xl py-5 text-gray-600 dark:text-gray-300 [&_strong]:dark:text-gray-200">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="text-xl py-5 text-gray-600 dark:text-gray-300 [&_strong]:dark:text-gray-200"
+          >
             <p>
               Hi, I'm <strong>Turhan</strong>! <br /><br />
 
@@ -28,14 +37,19 @@ export const About = () => {
               >
                 <Button variant="ghost" className="text-xl p-0 !px-1 underline">
                   <strong>4 publications</strong>
-                  <ExternalLink className="size-4"/>
+                  <ExternalLink className="size-4" />
                 </Button>
               </a> {" "}
               in prestigious venues like <strong>IEEE</strong>, bringing a rigorous, problem-solving mindset to everything I build. <br /><br />
             </p>
-          </div>
+          </motion.div>
         </div>
-        <div className="hidden sm:flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="hidden sm:flex justify-center items-center">
           <Image
             className="rounded-full"
             src="/angie-pic.JPG"
@@ -43,7 +57,7 @@ export const About = () => {
             height={400}
             alt="Picture of the author"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

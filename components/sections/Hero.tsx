@@ -28,7 +28,7 @@ export const Hero = () => {
           wrapper="span"
           speed={50}
           style={{ display: 'inline-block' }}
-          repeat={Infinity}
+          repeat={0}
         />
       </p>
       <a href="#projects">
