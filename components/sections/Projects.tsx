@@ -36,7 +36,7 @@ export const Projects = () => {
       className="
         min-h-screen flex flex-col justify-center items-center 
         pb-20 px-5 
-        dark:bg-gray-900
+        bg-white dark:bg-gray-900
       "
     >
       {/* Section title */}

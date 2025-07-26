@@ -55,13 +55,19 @@ export const ClientWrapperLayout = ({
     <>
       <header
         className="
-          flex justify-between py-3 px-5 
+          flex justify-between 
+          py-3 px-5 
           bg-gray-50 text-gray-700 
           dark:bg-gray-800 dark:text-gray-200
         "
       >
         {/* Desktop navigation bar */}
-        <nav className="hidden md:flex justify-center items-center space-x-2 font-medium">
+        <nav
+          className="
+            hidden 
+            md:flex justify-center items-center space-x-2 font-medium
+          "
+        >
           {navbarButtonsData.map(({ href, label }) => (
             <a key={label} href={href}>
               <Button
@@ -78,7 +84,10 @@ export const ClientWrapperLayout = ({
         <Button
           variant="ghost"
           onClick={toggleHamburgerMenu}
-          className="md:hidden text-gray-700 dark:text-gray-200"
+          className="
+            md:hidden 
+            text-gray-700 dark:text-gray-200
+          "
         >
           {hamburgerMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
         </Button>
@@ -87,7 +96,8 @@ export const ClientWrapperLayout = ({
         {hamburgerMenuOpen && (
           <nav
             className="
-              md:hidden flex flex-col justify-start items-center 
+              md:hidden 
+              flex flex-col justify-start items-center 
               px-4 pb-4 space-y-2
               bg-gray-50 dark:bg-gray-800 
               text-gray-700 dark:text-gray-200 
@@ -129,16 +139,17 @@ export const ClientWrapperLayout = ({
 
       <footer
         className="
-          flex flex-col items-center justify-center py-6 px-5 space-y-3
+          flex flex-col items-center justify-center space-y-3
+          py-6 px-5
           text-sm font-medium
-          text-gray-700 dark:text-gray-200 
           bg-gray-50 dark:bg-gray-800 
           border-gray-200 dark:border-gray-700
+          text-gray-700 dark:text-gray-200
         "
         id="footer"
       >
         {/* Footer title */}
-        <span className="text-lg text-gray-500 dark:text-gray-400 text-center">
+        <span className="text-center text-lg text-gray-500 dark:text-gray-400">
           Connect With Me
         </span>
 
@@ -163,7 +174,7 @@ export const ClientWrapperLayout = ({
         </div>
 
         {/* Copyright */}
-        <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+        <p className="text-center text-sm text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()} Turhan Kimbrough. All rights reserved.
         </p>
       </footer>

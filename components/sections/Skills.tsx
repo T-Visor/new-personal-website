@@ -124,7 +124,13 @@ export const Skills = (): JSX.Element => {
   return (
     <section
       id="skills"
-      className="min-h-fit sm:min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-16 flex flex-col justify-center items-center px-5"
+      className="
+        min-h-fit sm:min-h-screen 
+        flex flex-col justify-center items-center 
+        px-5 py-16
+        bg-white dark:bg-gray-900 
+        text-gray-900 dark:text-gray-100 
+      "
     >
       <h2 className="text-4xl font-semibold mb-10">
         Skills
