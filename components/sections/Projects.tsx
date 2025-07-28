@@ -43,7 +43,7 @@ export const Projects = () => {
       "
     >
       {/* Section title */}
-      <div className="text-4xl font-semibold mb-10 pt-8">
+      <div className="text-4xl font-semibold mb-10 pt-8 text-gray-900 dark:text-gray-100">
         <h2>Projects</h2>
       </div>
 
@@ -66,18 +66,17 @@ export const Projects = () => {
           >
             <div className="
               flex-1 text-center md:text-left
-              text-gray-600 dark:text-gray-300 
             ">
               {/* Project title */}
               <h2 className="
-                text-3xl font-semibold py-3 
-                text-gray-700 dark:text-gray-200
+                text-3xl font-semibold py-3
+                text-gray-800 dark:text-gray-200 
               ">
                 {project.title}
               </h2>
 
               {/* Project description */}
-              <p className="text-xl py-3">{project.description}</p>
+              <p className="text-xl py-3 text-gray-700 dark:text-gray-300">{project.description}</p>
 
               {/* GitHub and publication links */}
               <div className="flex justify-center md:justify-start items-center space-x-3">
@@ -110,7 +109,7 @@ export const Projects = () => {
             {/* Project Screenshot */}
             <div className="flex-1 flex justify-center">
               <Image
-                className="border-1 dark:border-gray-700 shadow-lg rounded-sm"
+                className="border-1 border-gray-400 dark:border-gray-700 shadow-lg rounded-sm"
                 src={project.image}
                 width={500}
                 height={500}
