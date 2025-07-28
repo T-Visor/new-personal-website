@@ -12,7 +12,7 @@ export const About = () => {
       className="min-h-fit sm:min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl">
-        <div className="flex flex-col justify-center items-center text-gray-600 dark:text-gray-300">
+        <div className="flex flex-col justify-center items-center">
           <h2 className="text-4xl font-semibold py-3 text-gray-900 dark:text-gray-100">
             About Me
           </h2>
@@ -21,7 +21,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="text-xl py-5 text-gray-600 dark:text-gray-300 [&_strong]:dark:text-gray-200"
+            className="text-xl py-5 text-gray-800 dark:text-gray-300 [&_strong]:dark:text-gray-200"
           >
             <p>
               Hi, I'm <strong>Turhan</strong>! <br /><br />
