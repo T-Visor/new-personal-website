@@ -3,9 +3,29 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
-import { motion } from 'framer-motion';
+import FadeInView from "@/components/FadeInView";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
-const projectData = [
+type ProjectInfo = {
+  title: string,
+  description: string,
+  image: string,
+  github: string,
+  publication: string
+};
+
+type ProjectShowcaseItemProps = {
+  project: ProjectInfo;
+  index: number;
+}
+
+const projects: ProjectInfo[] = [
   {
     title: "Note-a-log",
     description:
@@ -32,6 +52,85 @@ const projectData = [
   },
 ];
 
+const ProjectShowcaseItem = ({
+  project,
+  index
+}: ProjectShowcaseItemProps) => {
+  return (
+    <div
+      className={`
+        flex flex-col md:flex-row items-center 
+        pt-10 gap-10 border-t md:border-0 md:pb-0
+        ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} 
+        dark:border-gray-600
+      `}
+    >
+      {/* Info container */}
+      <div className="flex-1 flex flex-col w-full text-center md:text-left">
+        {/* Project title */}
+        <h2 className="text-3xl font-semibold py-3 text-gray-800 dark:text-gray-200">
+          {project.title}
+        </h2>
+
+        {/* Project description */}
+        <p className="text-xl py-3 text-gray-700 dark:text-gray-300">
+          {project.description}
+        </p>
+
+        {/* Screenshot - only visible on mobile inside info block */}
+        <div className="my-4 md:hidden flex justify-center">
+          <Image
+            className="border-1 border-gray-400 dark:border-gray-700 shadow-lg rounded-sm"
+            src={project.image}
+            width={500}
+            height={500}
+            alt={`screenshot of ${project.title}`}
+          />
+        </div>
+
+        {/* GitHub and publication links */}
+        <div className="flex justify-center md:justify-start items-center space-x-3 mt-2">
+          {project.github && (
+            <div className="py-3">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="text-xl flex items-center">
+                  <GithubIcon className="size-5" />
+                  GitHub
+                </Button>
+              </a>
+            </div>
+          )}
+          {project.publication && (
+            <a
+              href={project.publication}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="text-xl flex items-center">
+                Publication
+              </Button>
+            </a>
+          )}
+        </div>
+      </div>
+      {/* Screenshot - only visible on desktop (moved outside info block) */}
+      <div className="flex-1 justify-center hidden md:flex">
+        <Image
+          className="border-1 border-gray-400 dark:border-gray-700 shadow-lg rounded-sm"
+          src={project.image}
+          width={500}
+          height={500}
+          alt={`screenshot of ${project.title}`}
+        />
+      </div>
+    </div>
+  );
+}
+
 export const Projects = () => {
   return (
     <section
@@ -47,78 +146,18 @@ export const Projects = () => {
         <h2>Projects</h2>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true }}
+      {/* Project showcase items */}
+      <FadeInView
         className="flex flex-col gap-20 max-w-5xl w-full"
       >
-        {projectData.map((project, index) => (
-          <div
+        {projects.map((project, index) => (
+          <ProjectShowcaseItem
             key={index}
-            className={`
-              flex flex-col md:flex-row items-center 
-              pt-10 gap-10 border-t sm:border-0 sm:pb-0
-              ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} 
-              dark:border-gray-600 
-            `}
-          >
-            <div className="
-              flex-1 text-center md:text-left
-            ">
-              {/* Project title */}
-              <h2 className="
-                text-3xl font-semibold py-3
-                text-gray-800 dark:text-gray-200 
-              ">
-                {project.title}
-              </h2>
-
-              {/* Project description */}
-              <p className="text-xl py-3 text-gray-700 dark:text-gray-300">{project.description}</p>
-
-              {/* GitHub and publication links */}
-              <div className="flex justify-center md:justify-start items-center space-x-3">
-                {project.github && <div className="py-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline" className="text-xl flex items-center">
-                      <GithubIcon className="size-5" />
-                      GitHub
-                    </Button>
-                  </a>
-                </div>}
-                {project.publication &&
-                  <a
-                    href={project.publication}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline" className="text-xl flex items-center">
-                      Publication
-                    </Button>
-                  </a>
-                }
-              </div>
-            </div>
-
-            {/* Project Screenshot */}
-            <div className="flex-1 flex justify-center">
-              <Image
-                className="border-1 border-gray-400 dark:border-gray-700 shadow-lg rounded-sm"
-                src={project.image}
-                width={500}
-                height={500}
-                alt={`screenshot of ${project.title}`}
-              />
-            </div>
-          </div>
+            project={project}
+            index={index}
+          />
         ))}
-      </motion.div>
+      </FadeInView>
     </section>
   );
 };

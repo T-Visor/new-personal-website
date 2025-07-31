@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import { motion } from 'framer-motion';
+import FadeInView from "@/components/FadeInView";
 
 export const About = () => {
   return (
@@ -16,11 +16,7 @@ export const About = () => {
           <h2 className="text-4xl font-semibold py-3 text-gray-900 dark:text-gray-100">
             About Me
           </h2>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}
+          <FadeInView
             className="text-xl py-5 text-gray-800 dark:text-gray-300 [&_strong]:dark:text-gray-200"
           >
             <p>
@@ -42,14 +38,11 @@ export const About = () => {
               </a> {" "}
               in prestigious venues like <strong>IEEE</strong>, bringing a rigorous, problem-solving mindset to everything I build. <br /><br />
             </p>
-          </motion.div>
+          </FadeInView>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          className="hidden sm:flex justify-center items-center">
+        <FadeInView 
+          className="hidden sm:flex justify-center items-center"
+        >
           <Image
             className="rounded-full"
             src="/angie-pic.JPG"
@@ -57,7 +50,7 @@ export const About = () => {
             height={400}
             alt="Picture of the author"
           />
-        </motion.div>
+        </FadeInView>
       </div>
     </section>
   );
