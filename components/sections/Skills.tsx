@@ -8,7 +8,7 @@ import { AiOutlinePython } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IconType } from "react-icons";
 import { JSX } from "react";
-import { motion } from 'framer-motion';
+import FadeInView from "@/components/FadeInView";
 
 type SkillIcon = {
   Icon: IconType;
@@ -139,12 +139,9 @@ export const Skills = (): JSX.Element => {
         Skills
       </h2>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+      <FadeInView
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full"
+      >
         {skillsData.map(({ title, icons }) => (
           <SkillCard
             key={title}
@@ -152,7 +149,7 @@ export const Skills = (): JSX.Element => {
             icons={icons}
           />
         ))}
-      </motion.div>
+      </FadeInView>
     </section>
   );
 }
