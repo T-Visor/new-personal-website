@@ -4,6 +4,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
 import FadeInView from "@/components/FadeInView";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 type ProjectInfo = {
   title: string,
@@ -129,6 +136,7 @@ export const Projects = () => {
         <h2>Projects</h2>
       </div>
 
+      {/* Desktop view */}
       <FadeInView
         className="flex flex-col gap-20 max-w-5xl w-full"
       >
