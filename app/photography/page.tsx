@@ -11,7 +11,7 @@ const Photography = () => {
     >
       <div className="
           w-screen 
-          flex items-center gap-10 p-15
+          flex items-center gap-5 py-15 pl-20
           text-gray-900 dark:text-gray-100
           bg-gray-50 dark:bg-gray-800
         "
@@ -23,8 +23,10 @@ const Photography = () => {
           height={100}
           alt="Picture of the author"
         />
-        <div className="flex flex-col items-center justify-center">
-          Photo Gallery
+        <div className="flex flex-col justify-start text-left">
+          <span className="font-bold text-lg">Turhan Kimbrough</span>
+          <span>Photographer</span>
+          <span className="text-muted"></span>
         </div>
       </div>
       <div>World</div>
