@@ -3,7 +3,7 @@ import { About } from "@/components/sections/About";
 import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Hero />
@@ -13,3 +13,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;
