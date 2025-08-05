@@ -11,7 +11,7 @@ const Photography = () => {
     >
       <div className="
           w-screen 
-          flex flex-col md:flex-row items-center gap-5 py-15 md:pl-20
+          flex flex-col md:flex-row items-center gap-5 py-8 md:py-13 md:pl-23
           text-gray-900 dark:text-gray-100
           bg-gray-50 dark:bg-gray-800
         "
@@ -27,7 +27,7 @@ const Photography = () => {
           <span className="font-bold text-lg">
             Turhan Kimbrough
           </span>
-          <span>
+          <span className="text-gray-800 dark:text-gray-300">
             Photographer
           </span>
         </div>
