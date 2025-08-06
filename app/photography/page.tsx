@@ -45,8 +45,8 @@ const Photography = () => {
         <Image
           className="rounded-full border-1"
           src="/akira-profile-pic.webp"
-          width={120}
-          height={120}
+          width={110}
+          height={110}
           alt="Picture of the author"
         />
         <div className="flex flex-col justify-start text-center md:text-left">
@@ -56,7 +56,7 @@ const Photography = () => {
       </div>
 
       {/* Masonry Grid */}
-      <div className="w-full px-1 py-2 md:px-10">
+      <div className="w-full px-1 py-2 md:px-3">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
           className="flex w-auto -ml-2"
