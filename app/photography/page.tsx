@@ -20,7 +20,7 @@ const Photography = () => {
       <img
         src={src}
         alt={`Test image ${index + 1}`}
-        className="w-full h-auto rounded-md object-cover"
+        className="w-full h-auto rounded-md object-cover border-1"
       />
     </div>
   ));
@@ -43,8 +43,8 @@ const Photography = () => {
         "
       >
         <Image
-          className="rounded-full"
-          src="/angie-pic.JPG"
+          className="rounded-full border-1"
+          src="/akira-profile-pic.webp"
           width={120}
           height={120}
           alt="Picture of the author"
