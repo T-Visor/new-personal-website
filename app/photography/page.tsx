@@ -37,7 +37,7 @@ const Photography = () => {
     <div className="min-h-screen flex flex-col items-center">
       <div className="
           w-full 
-          flex flex-col md:flex-row items-center gap-5 py-8 md:py-13 md:pl-23
+          flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 md:py-13 md:pl-23
           text-gray-900 dark:text-gray-100
           bg-gray-50 dark:bg-gray-800
         "
