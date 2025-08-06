@@ -4,12 +4,27 @@ import Masonry from 'react-masonry-css';
 import Image from "next/image";
 
 const Photography = () => {
-  // Create an array of items — replace with real image data when available
-  const items = Array.from({ length: 20 }).map((_, index) => (
+  const items = [
+    "https://picsum.photos/id/1015/600/400",
+    "https://picsum.photos/id/1025/300/500",
+    "https://picsum.photos/id/1035/400/300",
+    "https://picsum.photos/id/1045/350/600",
+    "https://picsum.photos/id/1055/450/400",
+    "https://picsum.photos/id/1065/500/350",
+    "https://picsum.photos/id/1075/300/300",
+    "https://picsum.photos/id/1085/400/600",
+    "https://picsum.photos/id/1095/550/400",
+    "https://picsum.photos/id/1105/600/600",
+  ].map((src, index) => (
     <div key={index} className="masonry-item p-2">
-      <div className="bg-gray-200 dark:bg-gray-700 h-48 w-full rounded-md" />
+      <img
+        src={src}
+        alt={`Test image ${index + 1}`}
+        className="w-full h-auto rounded-md object-cover"
+      />
     </div>
   ));
+
 
   // Define breakpoints for responsive design
   const breakpointColumnsInfo = {
@@ -41,11 +56,11 @@ const Photography = () => {
       </div>
 
       {/* Masonry Grid */}
-      <div className="w-full px-4 py-2 md:px-10">
+      <div className="w-full px-2 py-2 md:px-10">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
-          className="flex w-auto -ml-4"
-          columnClassName="pl-4"
+          className="flex w-auto -ml-2"
+          columnClassName="pl-2"
         >
           {items}
         </Masonry>
