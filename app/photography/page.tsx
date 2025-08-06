@@ -16,7 +16,7 @@ const Photography = () => {
     "https://picsum.photos/id/1095/550/400",
     "https://picsum.photos/id/1105/600/600",
   ].map((src, index) => (
-    <div key={index} className="masonry-item p-2">
+    <div key={index} className="masonry-item p-1">
       <img
         src={src}
         alt={`Test image ${index + 1}`}
@@ -56,11 +56,11 @@ const Photography = () => {
       </div>
 
       {/* Masonry Grid */}
-      <div className="w-full px-2 py-2 md:px-10">
+      <div className="w-full px-1 py-2 md:px-10">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
           className="flex w-auto -ml-2"
-          columnClassName="pl-2"
+          columnClassName="pl-1"
         >
           {items}
         </Masonry>
