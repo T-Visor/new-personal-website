@@ -55,8 +55,7 @@ const Photography = () => {
       <div className="w-full px-1 py-2 md:px-3">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
-          className="flex w-auto -ml-2"
-          columnClassName="pl-1"
+          className="flex w-auto"
         >
           {items}
         </Masonry>
