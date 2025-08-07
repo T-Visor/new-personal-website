@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link";
+import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
 import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -47,7 +49,8 @@ export const ClientWrapperLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const { setTheme, resolvedTheme } = useTheme()
+  const pathName = usePathname();
+  const { setTheme, resolvedTheme } = useTheme();
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
   const toggleHamburgerMenu = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
 
@@ -80,17 +83,20 @@ export const ClientWrapperLayout = ({
           ))}
 
           {/* Vertical splitter */}
-          <div className="h-5 border-l border-gray-400" />
+          <div className="h-7 border-l border-gray-400" />
           
           {/* Link to Photography page */}
-          <a>
+          <Link href="/photography">
             <Button
               variant="ghost"
-              className="text-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              className={`
+                text-md hover:bg-gray-200 dark:hover:bg-gray-700 
+                ${pathName === "/photography" ? "border-2 bg-gray-200 dark:bg-gray-700" : ""}
+              `}
             >
               Photography
             </Button>
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -130,15 +136,18 @@ export const ClientWrapperLayout = ({
           </nav>
         )}
 
-        {/* Dark/Light Mode Toggle */}
         <div className="flex justify-center gap-2">
-          {/* Camera icon for mobile */}
-          <Button
-            variant="ghost"
-            className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
-          >
-            <Images className="size-5" />
-          </Button>
+          {/* Mobile Photography link */}
+          <Link href="/photography">
+            <Button
+              variant="ghost"
+              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <Images className="size-5" />
+            </Button>
+          </Link>
+
+          {/* Dark/Light Mode Toggle */}
           <Button
             variant="ghost"
             className="hover:bg-gray-200 dark:hover:bg-gray-700"
