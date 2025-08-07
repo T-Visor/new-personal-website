@@ -5,16 +5,12 @@ import Image from "next/image";
 
 const Photography = () => {
   const items = [
-    "https://picsum.photos/id/1015/600/400",
-    "https://picsum.photos/id/1025/300/500",
-    "https://picsum.photos/id/1035/400/300",
-    "https://picsum.photos/id/1045/350/600",
-    "https://picsum.photos/id/1055/450/400",
-    "https://picsum.photos/id/1065/500/350",
-    "https://picsum.photos/id/1075/300/300",
-    "https://picsum.photos/id/1085/400/600",
-    "https://picsum.photos/id/1095/550/400",
-    "https://picsum.photos/id/1105/600/600",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101834/IMG_2611_hw1kww.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101832/IMG_2616_f2tiow.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415458/Leaves_n3g0gm.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg"
   ].map((src, index) => (
     <div key={index} className="masonry-item p-1">
       <img
@@ -28,7 +24,7 @@ const Photography = () => {
 
   // Define breakpoints for responsive design
   const breakpointColumnsInfo = {
-    default: 3,
+    default: 4,
     1100: 3,
     700: 2,
   };
