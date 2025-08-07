@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -78,6 +78,19 @@ export const ClientWrapperLayout = ({
               </Button>
             </a>
           ))}
+
+          {/* Vertical splitter */}
+          <div className="h-5 border-l border-gray-400" />
+          
+          {/* Link to Photography page */}
+          <a>
+            <Button
+              variant="ghost"
+              className="text-md hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              Photography
+            </Button>
+          </a>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -118,19 +131,28 @@ export const ClientWrapperLayout = ({
         )}
 
         {/* Dark/Light Mode Toggle */}
-        <Button
-          variant="ghost"
-          className="hover:bg-gray-200 dark:hover:bg-gray-700"
-          onClick={() => {
-            resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
-          }}
-        >
-          {resolvedTheme === "dark" ? (
-            <Sun className="size-5" />
-          ) : (
-            <Moon className="size-5" />
-          )}
-        </Button>
+        <div className="flex justify-center gap-2">
+          {/* Camera icon for mobile */}
+          <Button
+            variant="ghost"
+            className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <Images className="size-5" />
+          </Button>
+          <Button
+            variant="ghost"
+            className="hover:bg-gray-200 dark:hover:bg-gray-700"
+            onClick={() => {
+              resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
+            }}
+          >
+            {resolvedTheme === "dark" ? (
+              <Sun className="size-5" />
+            ) : (
+              <Moon className="size-5" />
+            )}
+          </Button>
+        </div>
       </header>
 
       <main>
