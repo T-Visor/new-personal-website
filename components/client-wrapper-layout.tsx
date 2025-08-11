@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, Code } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -51,8 +51,6 @@ export const ClientWrapperLayout = ({
 }>) => {
   const pathName = usePathname();
   const { setTheme, resolvedTheme } = useTheme();
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const toggleHamburgerMenu = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
 
   return (
     <>
@@ -71,20 +69,19 @@ export const ClientWrapperLayout = ({
             md:flex justify-center items-center space-x-2 font-medium
           "
         >
-          {navbarButtonsData.map(({ href, label }) => (
-            <a key={label} href={href}>
-              <Button
-                variant="ghost"
-                className="text-md hover:bg-gray-200 dark:hover:bg-gray-700"
-              >
-                {label}
-              </Button>
-            </a>
-          ))}
+          {/* Link to Photography page */}
+          <Link href="/">
+            <Button
+              variant="ghost"
+              className={`
+                text-md hover:bg-gray-200 dark:hover:bg-gray-700 
+                ${pathName === "/" ? "border-2 bg-gray-200 dark:bg-gray-700" : ""}
+              `}
+            >
+              Software
+            </Button>
+          </Link>
 
-          {/* Vertical splitter */}
-          <div className="h-7 border-l border-gray-400" />
-          
           {/* Link to Photography page */}
           <Link href="/photography">
             <Button
@@ -99,44 +96,16 @@ export const ClientWrapperLayout = ({
           </Link>
         </nav>
 
-        {/* Mobile Hamburger */}
-        <Button
-          variant="ghost"
-          onClick={toggleHamburgerMenu}
-          className="
-            md:hidden 
-            text-gray-700 dark:text-gray-200
-          "
-        >
-          {hamburgerMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </Button>
-
-        {/* Mobile Dropdown Menu */}
-        {hamburgerMenuOpen && (
-          <nav
-            className="
-              md:hidden 
-              flex flex-col justify-start items-center 
-              px-4 pb-4 space-y-2
-              bg-gray-50 dark:bg-gray-800 
-              text-gray-700 dark:text-gray-200 
-            "
-          >
-            {navbarButtonsData.map(({ href, label }) => (
-              <a key={label} href={href}>
-                <Button
-                  variant="ghost"
-                  className="text-md"
-                  onClick={() => setHamburgerMenuOpen(false)}
-                >
-                  {label}
-                </Button>
-              </a>
-            ))}
-          </nav>
-        )}
-
         <div className="flex justify-center gap-2">
+          <Link href="/">
+            <Button
+              variant="ghost"
+              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <Code className="size-5" />
+            </Button>
+          </Link>
+
           {/* Mobile Photography link */}
           <Link href="/photography">
             <Button
