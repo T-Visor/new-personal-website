@@ -75,10 +75,10 @@ export const ClientWrapperLayout = ({
               variant="ghost"
               className={`
                 text-md hover:bg-gray-200 dark:hover:bg-gray-700 
-                ${pathName === "/" ? "border-2 bg-gray-200 dark:bg-gray-700" : ""}
+                ${pathName === "/" ? "bg-gray-200 dark:bg-gray-700" : ""}
               `}
             >
-              Software
+              Home
             </Button>
           </Link>
 
@@ -88,7 +88,7 @@ export const ClientWrapperLayout = ({
               variant="ghost"
               className={`
                 text-md hover:bg-gray-200 dark:hover:bg-gray-700 
-                ${pathName === "/photography" ? "border-2 bg-gray-200 dark:bg-gray-700" : ""}
+                ${pathName === "/photography" ? "bg-gray-200 dark:bg-gray-700" : ""}
               `}
             >
               Photography
@@ -96,7 +96,14 @@ export const ClientWrapperLayout = ({
           </Link>
         </nav>
 
-        <div className="flex justify-center gap-2">
+        {/* navigation bar */}
+        <nav
+          className="
+            md:hidden 
+            flex justify-center items-center space-x-2 font-medium
+          "
+        >
+          {/* Link to Photography page */}
           <Link href="/">
             <Button
               variant="ghost"
@@ -106,7 +113,6 @@ export const ClientWrapperLayout = ({
             </Button>
           </Link>
 
-          {/* Mobile Photography link */}
           <Link href="/photography">
             <Button
               variant="ghost"
@@ -115,22 +121,21 @@ export const ClientWrapperLayout = ({
               <Images className="size-5" />
             </Button>
           </Link>
-
-          {/* Dark/Light Mode Toggle */}
-          <Button
-            variant="ghost"
-            className="hover:bg-gray-200 dark:hover:bg-gray-700"
-            onClick={() => {
-              resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
-            }}
-          >
-            {resolvedTheme === "dark" ? (
-              <Sun className="size-5" />
-            ) : (
-              <Moon className="size-5" />
-            )}
-          </Button>
-        </div>
+        </nav>
+        {/* Dark/Light Mode Toggle */}
+        <Button
+          variant="ghost"
+          className="hover:bg-gray-200 dark:hover:bg-gray-700"
+          onClick={() => {
+            resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
+          }}
+        >
+          {resolvedTheme === "dark" ? (
+            <Sun className="size-5" />
+          ) : (
+            <Moon className="size-5" />
+          )}
+        </Button>
       </header>
 
       <main>
