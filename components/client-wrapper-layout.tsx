@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, Code } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, Code, Home } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -69,13 +69,12 @@ export const ClientWrapperLayout = ({
             md:flex justify-center items-center space-x-2 font-medium
           "
         >
-          {/* Link to Photography page */}
+          {/* Link to Home page */}
           <Link href="/">
             <Button
               variant="ghost"
               className={`
-                text-md hover:bg-gray-200 dark:hover:bg-gray-700 
-                ${pathName === "/" ? "bg-gray-200 dark:bg-gray-700" : ""}
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
               `}
             >
               Home
@@ -87,8 +86,7 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                text-md hover:bg-gray-200 dark:hover:bg-gray-700 
-                ${pathName === "/photography" ? "bg-gray-200 dark:bg-gray-700" : ""}
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
               `}
             >
               Photography
@@ -109,7 +107,7 @@ export const ClientWrapperLayout = ({
               variant="ghost"
               className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
             >
-              <Code className="size-5" />
+              <Home className="size-5" />
             </Button>
           </Link>
 
