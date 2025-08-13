@@ -8,7 +8,7 @@ import { AiOutlinePython } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IconType } from "react-icons";
 import { JSX } from "react";
-import FadeInView from "@/components/FadeInView";
+import { FadeInView } from "@/components/motion-animations";
 
 type SkillIcon = {
   Icon: IconType;

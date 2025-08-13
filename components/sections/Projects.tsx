@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
-import FadeInView from "@/components/FadeInView";
+import { FadeInView } from "@/components/motion-animations";
 import {
   Carousel,
   CarouselContent,

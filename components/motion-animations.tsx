@@ -6,9 +6,9 @@ interface FadeInViewProps {
   className?: string;
 }
 
-const FadeInView = ({ 
-  children, 
-  className 
+export const FadeInView = ({
+  children,
+  className
 }: FadeInViewProps) => {
   return (
     <motion.div
@@ -23,4 +23,19 @@ const FadeInView = ({
   );
 };
 
-export default FadeInView;
+export const FadeInViewPage = ({
+  children,
+  className
+}: FadeInViewProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
