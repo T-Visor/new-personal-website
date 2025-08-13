@@ -39,3 +39,20 @@ export const FadeInViewPage = ({
     </motion.div>
   );
 };
+
+export const FadeInViewDownward = ({
+  children,
+  className
+}: FadeInViewProps) => {
+  return (
+    <motion.div
+      initial={{ clipPath: "inset(0 0 100% 0)", opacity: 0 }}
+      whileInView={{ clipPath: "inset(0 0 0% 0)", opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};

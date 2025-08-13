@@ -2,7 +2,7 @@
 
 import Masonry from "react-masonry-css";
 import Image from "next/image";
-import { FadeInViewPage } from "@/components/motion-animations";
+import { FadeInViewDownward } from "@/components/motion-animations";
 
 const Photography = () => {
   const items = [
@@ -31,7 +31,7 @@ const Photography = () => {
   };
 
   return (
-    <FadeInViewPage className="min-h-screen flex flex-col items-center">
+    <FadeInViewDownward className="min-h-screen flex flex-col items-center">
       <div className="
           w-full 
           flex flex-col md:flex-row items-center gap-3 md:gap-5 py-3 md:py-13 md:pl-23
@@ -61,7 +61,7 @@ const Photography = () => {
           {items}
         </Masonry>
       </div>
-    </FadeInViewPage>
+    </FadeInViewDownward>
   );
 };
 
