@@ -34,7 +34,7 @@ export const Hero = () => {
       <a href="#projects">
         <Button
           variant="ghost"
-          className="rounded-full px-6 py-3 text-md font-semibold dark:text-gray-400"
+          className="hover:cursor-pointer rounded-full px-6 py-3 text-md font-semibold dark:text-gray-400"
         >
           View My Work
           <MoveDown />

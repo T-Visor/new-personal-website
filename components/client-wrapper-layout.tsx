@@ -1,7 +1,9 @@
 "use client"
 
+import Link from "next/link";
+import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, Code, Home } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -47,9 +49,8 @@ export const ClientWrapperLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const { setTheme, resolvedTheme } = useTheme()
-  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const toggleHamburgerMenu = () => setHamburgerMenuOpen(!hamburgerMenuOpen);
+  const pathName = usePathname();
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
     <>
@@ -68,59 +69,61 @@ export const ClientWrapperLayout = ({
             md:flex justify-center items-center space-x-2 font-medium
           "
         >
-          {navbarButtonsData.map(({ href, label }) => (
-            <a key={label} href={href}>
-              <Button
-                variant="ghost"
-                className="text-md hover:bg-gray-200 dark:hover:bg-gray-700"
-              >
-                {label}
-              </Button>
-            </a>
-          ))}
+          {/* Link to Home page */}
+          <Link href="/">
+            <Button
+              variant="ghost"
+              className={`
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
+              `}
+            >
+              Home
+            </Button>
+          </Link>
+
+          {/* Link to Photography page */}
+          <Link href="/photography">
+            <Button
+              variant="ghost"
+              className={`
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
+              `}
+            >
+              Photography
+            </Button>
+          </Link>
         </nav>
 
-        {/* Mobile Hamburger */}
-        <Button
-          variant="ghost"
-          onClick={toggleHamburgerMenu}
+        {/* navigation bar */}
+        <nav
           className="
             md:hidden 
-            text-gray-700 dark:text-gray-200
+            flex justify-center items-center space-x-2 font-medium
           "
         >
-          {hamburgerMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </Button>
+          {/* Link to Photography page */}
+          <Link href="/">
+            <Button
+              variant="ghost"
+              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <Home className="size-5" />
+            </Button>
+          </Link>
 
-        {/* Mobile Dropdown Menu */}
-        {hamburgerMenuOpen && (
-          <nav
-            className="
-              md:hidden 
-              flex flex-col justify-start items-center 
-              px-4 pb-4 space-y-2
-              bg-gray-50 dark:bg-gray-800 
-              text-gray-700 dark:text-gray-200 
-            "
-          >
-            {navbarButtonsData.map(({ href, label }) => (
-              <a key={label} href={href}>
-                <Button
-                  variant="ghost"
-                  className="text-md"
-                  onClick={() => setHamburgerMenuOpen(false)}
-                >
-                  {label}
-                </Button>
-              </a>
-            ))}
-          </nav>
-        )}
-
+          <Link href="/photography">
+            <Button
+              variant="ghost"
+              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <Images className="size-5" />
+            </Button>
+          </Link>
+        </nav>
         {/* Dark/Light Mode Toggle */}
         <Button
           variant="ghost"
-          className="hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
           onClick={() => {
             resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
           }}
@@ -163,7 +166,7 @@ export const ClientWrapperLayout = ({
               rel="noopener noreferrer"
             >
               <Button
-                className="hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
                 variant="ghost"
                 aria-label={screenReaderLabel}
               >
