@@ -123,7 +123,7 @@ export const ClientWrapperLayout = ({
         {/* Dark/Light Mode Toggle */}
         <Button
           variant="ghost"
-          className="hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
           onClick={() => {
             resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
           }}
@@ -166,7 +166,7 @@ export const ClientWrapperLayout = ({
               rel="noopener noreferrer"
             >
               <Button
-                className="hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
                 variant="ghost"
                 aria-label={screenReaderLabel}
               >
