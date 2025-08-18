@@ -27,7 +27,7 @@ const Photography = () => {
 
   // Define breakpoints for responsive design
   const breakpointColumnsInfo = {
-    default: 4,
+    default: 3,
     1100: 3,
     700: 2,
   };
@@ -41,13 +41,24 @@ const Photography = () => {
           bg-gray-50 dark:bg-gray-800
         "
       >
+        {/* Smaller profile icon on mobile */}
         <Image
-          className="rounded-full border-1"
+          className="block md:hidden rounded-full border-1"
+          src="/akira-profile-pic.webp"
+          width={80}
+          height={80}
+          alt="Picture of the author"        
+        />
+
+        {/* Larger profile icon on desktop */}
+        <Image
+          className="hidden md:block rounded-full border-1"
           src="/akira-profile-pic.webp"
           width={110}
           height={110}
           alt="Picture of the author"
         />
+
         <div className="flex flex-col justify-start text-center md:text-left">
           <span className="font-bold text-lg">Turhan Kimbrough</span>
           <span className="text-gray-800 dark:text-gray-300">Photographer</span>
