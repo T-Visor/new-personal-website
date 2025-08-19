@@ -96,7 +96,7 @@ export const ClientWrapperLayout = ({
           </Link>
         </nav>
 
-        {/* navigation bar */}
+        {/* Mobile navigation bar */}
         <nav
           className="
             md:hidden 
@@ -108,8 +108,7 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                ${pathName === "/" ? "" : "text-gray-400"}
-                md:hidden hover:bg-gray-200 dark:hover:bg-gray-700
+                hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
               <Home className="size-5" />
@@ -119,8 +118,7 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                ${pathName === "/photography" ? "" : "text-gray-400"}
-                md:hidden hover:bg-gray-200 dark:hover:bg-gray-700
+                hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
               <Images className="size-5" />
