@@ -74,7 +74,8 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
+                ${pathName === "/" ? "" : "text-gray-400"}
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
               Home
@@ -86,7 +87,8 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-b-sm 
+                ${pathName === "/photography" ? "" : "text-gray-400"}
+                text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
               Photography
