@@ -74,7 +74,7 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                ${pathName === "/" ? "" : "text-gray-400"}
+                ${pathName === "/" ? "" : "text-gray-400 dark:text-gray-500"}
                 text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
@@ -87,7 +87,7 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
-                ${pathName === "/photography" ? "" : "text-gray-400"}
+                ${pathName === "/photography" ? "" : "text-gray-400 dark:text-gray-500"}
                 text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
@@ -107,16 +107,21 @@ export const ClientWrapperLayout = ({
           <Link href="/">
             <Button
               variant="ghost"
-              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+              className={`
+                ${pathName === "/" ? "" : "text-gray-400"}
+                md:hidden hover:bg-gray-200 dark:hover:bg-gray-700
+              `}
             >
               <Home className="size-5" />
             </Button>
           </Link>
-
           <Link href="/photography">
             <Button
               variant="ghost"
-              className="md:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+              className={`
+                ${pathName === "/photography" ? "" : "text-gray-400"}
+                md:hidden hover:bg-gray-200 dark:hover:bg-gray-700
+              `}
             >
               <Images className="size-5" />
             </Button>
