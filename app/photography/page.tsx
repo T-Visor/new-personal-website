@@ -27,9 +27,11 @@ const Photography = () => {
 
   // Define breakpoints for responsive design
   const breakpointColumnsInfo = {
-    default: 3,
-    1100: 3,
-    700: 2,
+    default: 5, // large desktops and above
+    1400: 4,    // medium desktops
+    1024: 3,    // tablets in landscape / smaller desktops
+    768: 2,     // tablets in portrait
+    480: 2,     // phones
   };
 
   return (
@@ -47,7 +49,7 @@ const Photography = () => {
           src="/akira-profile-pic.webp"
           width={80}
           height={80}
-          alt="Picture of the author"        
+          alt="Picture of the author"
         />
 
         {/* Larger profile icon on desktop */}

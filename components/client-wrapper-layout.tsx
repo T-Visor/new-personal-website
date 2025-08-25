@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, Code, Home } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, CodeXml, Home } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -108,6 +108,8 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
+                border-b-2
+                ${pathName === "/" ? "rounded-b-none" : "border-transparent"}
                 hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
@@ -118,6 +120,8 @@ export const ClientWrapperLayout = ({
             <Button
               variant="ghost"
               className={`
+                border-b-2
+                ${pathName === "/photography" ? "rounded-b-none" : "border-transparent"}
                 hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
@@ -128,7 +132,10 @@ export const ClientWrapperLayout = ({
         {/* Dark/Light Mode Toggle */}
         <Button
           variant="ghost"
-          className="hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="
+            border-b-2 border-transparent md:border-b-0
+            hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
+          "
           onClick={() => {
             resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
           }}
