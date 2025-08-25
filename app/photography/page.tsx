@@ -19,7 +19,7 @@ const Photography = () => {
       <img
         src={src}
         alt={`Test image ${index + 1}`}
-        className="w-full h-auto rounded-md object-cover border-1"
+        className="w-full h-auto rounded-md object-cover ring-1 ring-gray-200 dark:ring-white/10"
       />
     </div>
   ));
@@ -68,7 +68,7 @@ const Photography = () => {
       </div>
 
       {/* Masonry Grid */}
-      <div className="w-full px-1 py-2 md:px-3">
+      <div className="w-full px-1 py-2 md:px-3 bg-gray-100 dark:bg-black">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
           className="flex w-auto"
