@@ -18,8 +18,6 @@ export const Hero = () => {
           sequence={[
             "Web Development",
             2000,
-            "Data Pipelines",
-            2000,
             "AI Integration",
             2000,
             "Full-Stack AI Engineer",
