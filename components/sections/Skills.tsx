@@ -93,7 +93,7 @@ const skillsData: SkillCard[] = [
       },
       {
         Icon: SiShadcnui,
-        caption: "Shadcn/UI"
+        caption: "Shadcn/ui"
       },
       {
         Icon: FaDocker,

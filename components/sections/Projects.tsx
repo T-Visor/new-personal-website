@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Link } from "lucide-react";
 import { FadeInView } from "@/components/motion-animations";
 import {
   Carousel,
@@ -17,7 +17,8 @@ type ProjectInfo = {
   description: string,
   image: string,
   github: string,
-  publication: string
+  publication: string,
+  link?: string
 };
 
 type ProjectShowcaseItemProps = {
@@ -29,10 +30,11 @@ const projects: ProjectInfo[] = [
   {
     title: "Note-a-log",
     description:
-      "An AI-powered note-taking app which helps you stay organized. Note-a-log analyzes note contents and automatically suggests the most appropriate existing folders, or recommends creating new folders when your notes don't fit existing categories.",
+      "Made with love, Note-a-log is centered around intuitive organization and relevant resurfacing of notes. Note-a-log uses an intelligent tagging mechanism to automatically organize notes while optimizing search and discovery for your knowledge base.",
     image: "/note-a-log-screenshot.png",
     github: "",
     publication: "",
+    link: "https://note-a-log.vercel.app/"
   },
   {
     title: "Natural Language Housing Search",
@@ -112,6 +114,18 @@ const ProjectShowcaseItem = ({
             >
               <Button variant="outline" className="text-xl flex items-center">
                 Publication
+              </Button>
+            </a>
+          )}
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="text-xl flex items-center">
+                <Link className="size-5" />
+                Demo
               </Button>
             </a>
           )}
