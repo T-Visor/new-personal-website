@@ -1,16 +1,9 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, Link } from "lucide-react";
 import { FadeInView } from "@/components/motion-animations";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 
 type ProjectInfo = {
   title: string,
@@ -24,7 +17,7 @@ type ProjectInfo = {
 type ProjectShowcaseItemProps = {
   project: ProjectInfo;
   index: number;
-}
+};
 
 const projects: ProjectInfo[] = [
   {
@@ -90,7 +83,7 @@ const ProjectShowcaseItem = ({
           />
         </div>
 
-        {/* GitHub and publication links */}
+        {/* GitHub, publication links, and other links */}
         <div className="flex justify-center md:justify-start items-center space-x-3 mt-2">
           {project.github && (
             <div className="py-3">

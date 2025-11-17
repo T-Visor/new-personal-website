@@ -20,11 +20,11 @@ export const About = () => {
             className="text-xl py-5 text-gray-800 dark:text-gray-300 [&_strong]:dark:text-gray-200"
           >
             <p>
-              Hi, I'm <strong>Turhan</strong>! <br /><br />
+              Thanks for stopping by, I'm <strong>Turhan</strong>! <br /><br />
 
-              I'm a <strong>software engineer</strong> who builds <strong>full-stack applications</strong>, integrates <strong>AI solutions</strong>, and automates complex workflows. My work spans from crafting intuitive <strong>user experiences</strong> to architecting scalable <strong>data pipelines</strong>. <br /><br />
+              I'm a <strong>software engineer</strong> who builds <strong>full-stack applications</strong>, integrates <strong>AI solutions</strong>, and automates complex workflows. Needless to say, I have a passion for helping people solve problems with software. <br /><br />
 
-              Early in my career, I contributed to cutting-edge <strong>research</strong> with {" "}
+              In my early days, I contributed to cutting-edge <strong>research</strong> with {" "}
               <a
                 href="https://www.researchgate.net/scientific-contributions/Turhan-Kimbrough-2224206212"
                 target="_blank"
@@ -36,7 +36,7 @@ export const About = () => {
                   <ExternalLink className="size-4" />
                 </Button>
               </a> {" "}
-              in prestigious venues like <strong>IEEE</strong>, bringing a rigorous, problem-solving mindset to everything I build. <br /><br />
+              in prestigious venues such as <strong>IEEE</strong>. These experiences helped me develop a rigorous, problem-solving mindset for everything I build today. <br /><br />
             </p>
           </FadeInView>
         </div>
