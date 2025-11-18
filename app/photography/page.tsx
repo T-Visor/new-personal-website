@@ -3,6 +3,7 @@
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import { FadeInViewDownward } from "@/components/motion-animations";
+import { CldImage } from "next-cloudinary";
 
 const Photography = () => {
   const items = [
@@ -16,9 +17,11 @@ const Photography = () => {
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg"
   ].map((src, index) => (
     <div key={index} className="masonry-item p-1">
-      <img
+      <CldImage
         src={src}
         alt={`Test image ${index + 1}`}
+        width={800}
+        height={800}
         className="w-full h-auto rounded-md object-cover ring-1 ring-gray-200 dark:ring-white/10"
       />
     </div>
