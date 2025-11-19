@@ -114,7 +114,7 @@ const ProjectShowcaseItem = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="text-xl flex items-center">
+              <Button variant="outline" className="text-lg flex items-center">
                 {button.icon && <button.icon />}
                 {button.label}
               </Button>
