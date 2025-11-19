@@ -2,16 +2,20 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { GithubIcon, Link } from "lucide-react";
+import { GithubIcon, Link, TvMinimal, LucideIcon } from "lucide-react";
 import { FadeInView } from "@/components/motion-animations";
+
+type ButtonInfo = {
+  label: string;
+  icon?: LucideIcon;
+  link: string;
+};
 
 type ProjectInfo = {
   title: string,
   description: string,
   image: string,
-  github: string,
-  publication: string,
-  link?: string
+  buttons?: ButtonInfo[]
 };
 
 type ProjectShowcaseItemProps = {
@@ -25,25 +29,43 @@ const projects: ProjectInfo[] = [
     description:
       "Made with love, Note-a-log is centered around intuitive organization and relevant resurfacing of notes. Note-a-log uses an intelligent tagging mechanism to automatically organize notes while optimizing search and discovery for your knowledge base.",
     image: "/note-a-log-screenshot.png",
-    github: "",
-    publication: "",
-    link: "https://note-a-log.vercel.app/"
+    buttons: [
+      {
+        label: "Demo",
+        icon: TvMinimal,
+        link: "https://note-a-log.vercel.app/"
+      }
+    ]
   },
   {
     title: "Natural Language Housing Search",
     description:
       "A Zillow-style hobby project that leverages generative AI to power natural language search, enabling users to explore homes for sale through a seamless, intuitive interface.",
     image: "/housing-search-screenshot.png",
-    github: "https://github.com/T-Visor/natural-language-housing-search",
-    publication: "",
+    buttons: [
+      {
+        label: "Github",
+        icon: GithubIcon,
+        link: "https://github.com/T-Visor/natural-language-housing-search"
+      }
+    ]
   },
   {
     title: "Deep CAPTCHA Recognition",
     description:
       "Developed a comprehensive framework for training and fine-tuning convolutional neural network (CNN) models to recognize text-based CAPTCHA images.",
     image: "/crabi-preprocessing-example.png",
-    github: "https://github.com/T-Visor/decruehd-framework",
-    publication: "https://ieeexplore.ieee.org/document/9798233",
+    buttons: [
+      {
+        label: "Paper",
+        link: "https://ieeexplore.ieee.org/document/9798233"
+      },
+      {
+        label: "GitHub",
+        icon: GithubIcon,
+        link: "https://github.com/T-Visor/decruehd-framework"
+      },
+    ],
   },
 ];
 
@@ -85,45 +107,22 @@ const ProjectShowcaseItem = ({
 
         {/* GitHub, publication links, and other links */}
         <div className="flex justify-center md:justify-start items-center space-x-3 mt-2">
-          {project.github && (
-            <div className="py-3">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" className="text-xl flex items-center">
-                  <GithubIcon className="size-5" />
-                  GitHub
-                </Button>
-              </a>
-            </div>
-          )}
-          {project.publication && (
+          {project.buttons && project.buttons.map((button: ButtonInfo) => (
             <a
-              href={project.publication}
+              key={button.label}
+              href={button.link}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="outline" className="text-xl flex items-center">
-                Publication
+                {button.icon && <button.icon />}
+                {button.label}
               </Button>
             </a>
-          )}
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="text-xl flex items-center">
-                <Link className="size-5" />
-                Demo
-              </Button>
-            </a>
-          )}
+          ))}
         </div>
       </div>
+      
       {/* Screenshot - only visible on desktop (moved outside info block) */}
       <div className="flex-1 justify-center hidden md:flex">
         <Image
