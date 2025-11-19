@@ -7,14 +7,17 @@ import { CldImage } from "next-cloudinary";
 
 const Photography = () => {
   const items = [
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1755126909/IMG_2941_snss44.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1755126907/7EF6EF80-DA79-4FB5-B2BA-ED296FFA135C_y7h4qv.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101834/IMG_2611_hw1kww.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101832/IMG_2616_f2tiow.jpg",
-    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415458/Leaves_n3g0gm.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
-    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg"
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646360/IMG_1148_yaegg8.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520605/F9F7B314-BB49-4C34-8502-6D8FB97A689F_owyr5n.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520586/D9841AE6-57D8-494D-9EB2-2D1A01C6A835_izdsuw.jpg",
   ].map((src, index) => (
     <div key={index} className="masonry-item p-1">
       <CldImage
