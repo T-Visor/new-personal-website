@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import { FadeInViewDownward } from "@/components/motion-animations";
 import { CldImage } from "next-cloudinary";
+import Link from "next/link";
 
 const Photography = () => {
-  const items = [
+  const photos = [
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1755126909/IMG_2941_snss44.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1755126907/7EF6EF80-DA79-4FB5-B2BA-ED296FFA135C_y7h4qv.jpg",
@@ -18,18 +19,23 @@ const Photography = () => {
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520605/F9F7B314-BB49-4C34-8502-6D8FB97A689F_owyr5n.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520586/D9841AE6-57D8-494D-9EB2-2D1A01C6A835_izdsuw.jpg",
-  ].map((src, index) => (
-    <div key={index} className="masonry-item p-1">
-      <CldImage
-        src={src}
-        alt={`Test image ${index + 1}`}
-        width={800}
-        height={800}
-        className="w-full h-auto object-cover ring-1 shadow-md"
-      />
-    </div>
+  ].map((source, index) => (
+    <>
+      <Link
+        key={index}
+        href={`/photography/photo?src=${encodeURIComponent(source)}`}
+        className="masonry-item p-1 hover:cursor-pointer block"
+      >
+        <CldImage
+          src={source}
+          alt={`Photo ${index + 1}`}
+          width={800}
+          height={800}
+          className="w-full h-auto object-cover ring-1 shadow-md"
+        />
+      </Link>
+    </>
   ));
-
 
   // Define breakpoints for responsive design
   const breakpointColumnsInfo = {
@@ -79,7 +85,7 @@ const Photography = () => {
           breakpointCols={breakpointColumnsInfo}
           className="flex w-auto"
         >
-          {items}
+          {photos}
         </Masonry>
       </div>
     </FadeInViewDownward>
