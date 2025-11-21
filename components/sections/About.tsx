@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-fit sm:min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900"
+      className="min-h-screen flex flex-col justify-center items-center px-5 dark:bg-gray-900"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl">
         <div className="flex flex-col justify-center items-center">

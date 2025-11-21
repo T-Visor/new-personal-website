@@ -123,7 +123,7 @@ export const Skills = (): JSX.Element => (
   <section
     id="skills"
     className="
-        min-h-fit sm:min-h-screen 
+        min-h-screen 
         flex flex-col justify-center items-center 
         px-5 py-16
         bg-white dark:bg-gray-900 
