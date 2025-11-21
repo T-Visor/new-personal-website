@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, CodeXml, Home } from "lucide-react";
+import { Sun, Moon, Linkedin, Github, Mail, X, Menu, Images, CodeXml, Home, Code, CodeXmlIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
@@ -78,7 +78,7 @@ export const ClientWrapperLayout = ({
                 text-md hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
-              Home
+              Portfolio
             </Button>
           </Link>
 
@@ -113,7 +113,7 @@ export const ClientWrapperLayout = ({
                 hover:bg-gray-200 dark:hover:bg-gray-700
               `}
             >
-              <Home className="size-5" />
+              <CodeXml className="size-5" />
             </Button>
           </Link>
           <Link href="/photography">

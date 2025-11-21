@@ -27,7 +27,7 @@ const projects: ProjectInfo[] = [
   {
     title: "Note-a-log",
     description:
-      "Made with love, Note-a-log is centered around intuitive organization and relevant resurfacing of notes. Note-a-log uses an intelligent tagging mechanism to automatically organize notes while optimizing search and discovery for your knowledge base.",
+      "Note-a-log uses an intelligent tagging mechanism to automatically organize notes, optimizing search and discovery for relevant information.",
     image: "/note-a-log-screenshot.png",
     buttons: [
       {

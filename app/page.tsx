@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";

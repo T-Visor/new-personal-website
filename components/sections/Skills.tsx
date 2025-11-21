@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { FaGitAlt, FaReact, FaDocker, FaJava } from "react-icons/fa";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { FaReact, FaDocker, FaJava } from "react-icons/fa";
 import { SiCplusplus, SiFastapi, SiShadcnui, SiOllama, SiTensorflow, SiLangchain, SiHuggingface, SiPytorch } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { AiOutlinePython } from "react-icons/ai";
@@ -44,10 +44,6 @@ const skillsData: SkillCard[] = [
       {
         Icon: FaJava,
         caption: "Java"
-      },
-      {
-        Icon: FaGitAlt,
-        caption: "Git"
       },
     ]
   },
@@ -123,33 +119,31 @@ const SkillCard = ({ title, icons }: SkillCardProps): JSX.Element => (
   </Card>
 );
 
-export const Skills = (): JSX.Element => {
-  return (
-    <section
-      id="skills"
-      className="
+export const Skills = (): JSX.Element => (
+  <section
+    id="skills"
+    className="
         min-h-fit sm:min-h-screen 
         flex flex-col justify-center items-center 
         px-5 py-16
         bg-white dark:bg-gray-900 
         text-gray-900 dark:text-gray-100 
       "
-    >
-      <h2 className="text-4xl font-semibold mb-10">
-        Skills
-      </h2>
+  >
+    <h2 className="text-4xl font-semibold mb-10">
+      Skills
+    </h2>
 
-      <FadeInView
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full"
-      >
-        {skillsData.map(({ title, icons }) => (
-          <SkillCard
-            key={title}
-            title={title}
-            icons={icons}
-          />
-        ))}
-      </FadeInView>
-    </section>
-  );
-}
+    <FadeInView
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full"
+    >
+      {skillsData.map(({ title, icons }) => (
+        <SkillCard
+          key={title}
+          title={title}
+          icons={icons}
+        />
+      ))}
+    </FadeInView>
+  </section>
+);
