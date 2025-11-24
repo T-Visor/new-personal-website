@@ -13,7 +13,7 @@ const Photography = () => {
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101834/IMG_2611_hw1kww.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
-    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956930/IMG_3246_yepp7u.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/8FEFF362-BA95-4BBB-80C9-5CDC6DCC254D_mcqet9.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956926/1ADF6C11-8AC6-4D11-9E76-6E8FF10917D6_ppgaad.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763959344/foliage_gac8eo.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763957949/car_xabmfr.jpg",
