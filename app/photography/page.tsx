@@ -15,13 +15,15 @@ const Photography = () => {
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956930/IMG_3246_yepp7u.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956926/1ADF6C11-8AC6-4D11-9E76-6E8FF10917D6_ppgaad.jpg",
-    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101832/IMG_2616_f2tiow.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763959344/foliage_gac8eo.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763957949/car_xabmfr.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646360/IMG_1148_yaegg8.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520605/F9F7B314-BB49-4C34-8502-6D8FB97A689F_owyr5n.jpg",
     "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763520586/D9841AE6-57D8-494D-9EB2-2D1A01C6A835_izdsuw.jpg",
-    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956930/75820E51-B8AB-4EAA-A3BD-B367EB3C13CE_z65rjw.jpg"
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763956930/75820E51-B8AB-4EAA-A3BD-B367EB3C13CE_z65rjw.jpg",
+    "https://res.cloudinary.com/dfiwecvfd/image/upload/v1763958918/waterfall_oobvin.jpg"
   ].map((source, index) => (
     <>
       <Link
