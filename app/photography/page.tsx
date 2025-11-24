@@ -85,7 +85,7 @@ const Photography = () => {
       </div>
 
       {/* Masonry Grid */}
-      <div className="w-full py-1 bg-gray-50 dark:bg-black">
+      <div className="w-full py-1 bg-gray-100 dark:bg-black">
         <Masonry
           breakpointCols={breakpointColumnsInfo}
           className="flex w-auto"
